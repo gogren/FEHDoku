@@ -1,0 +1,4 @@
+have a seperate usestate for each square, as well a getCharacterMode for each square
+
+in the getCharacterMode, show maybe the 10 closest based on search query, then depending on who's clicked on, set the usestate to that characer after checking
+running some function that reutrns true if chacter fits constraits/false if not 

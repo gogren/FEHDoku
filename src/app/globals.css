@@ -2,32 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: rgb(30 41 59);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.square, .trsquare, .tlsquare, .blsquare, .brsquare {
+  width: 100px;
+  height: 100px;
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.square:hover, .trsquare:hover, .tlsquare:hover, .blsquare:hover, .brsquare:hover {
+  background-color: lightgray;
+}
+
+.trsquare {
+  border-top-right-radius: 8px;
+}
+
+.tlsquare {
+  border-top-left-radius: 8px;
+}
+
+.blsquare {
+  border-bottom-left-radius: 8px;
+}
+
+.brsquare {
+  border-bottom-right-radius: 8px;
+}
+
+.row-title {
+  width: 100px;
+  text-align: center; /* Align text to the center */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  color: yellow
+}
+
+
+.row-content {
+  display: flex;
+}
+
+.column-titles {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  padding-bottom: 8px;
+  color: yellow;
+}
+
+.column-title {
+  width: 100px;
+  text-align: center;
+}
+
+/* Empty divs for alignment */
+.empty-div {
+  width: 100px; /* Width matches column title width */
 }
