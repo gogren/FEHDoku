@@ -176,9 +176,9 @@ export default function Home() {
           </div>
           <div className='w-32 items-center text-center'>
             <div className="flex">
-              <div onClick={() => setInfoMode(true)} className="text-black bg-yellow-300 w-6 rounded-3xl font-bold hover:bg-yellow-500 hover:transform hover:-translate-y-1 transition duration-300">
+              <button onClick={() => setInfoMode(true)} className="text-black bg-yellow-300 w-6 rounded-3xl font-bold hover:bg-yellow-500 hover:transform hover:-translate-y-1 transition duration-300">
                 i
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -213,6 +213,9 @@ export default function Home() {
             </p>
             <p className=''>
               • Each box will have at least one correct answer, and every puzzle will have a valid solution.
+            </p>
+            <p>
+              • If a skill is listed as a constraint, heroes must have that skill in their base skill set.
             </p>
             <p>
               • Harmonic heros' game of origin is only the primary hero's game of origin.

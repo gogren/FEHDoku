@@ -19,7 +19,14 @@ interface Constraint {
     title: string;
     func: (character: Character) => boolean
 }
+const day = new Date().getDate();
 
-const rowTitles = [constraints.flying, constraints.duo, constraints.three_houses]
+let rowTitles:Constraint[] = [constraints.flying, constraints.duo, constraints.three_houses]
 
+if (day === 5) {
+    rowTitles = [constraints.flying, constraints.duo, constraints.three_houses]
+}
+else if (day === 6) {
+    rowTitles = [constraints.flying, constraints.green, constraints.dancer]
+}
 export default rowTitles

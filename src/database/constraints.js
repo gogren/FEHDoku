@@ -36,6 +36,9 @@ const constraints = {
    red: {id: "", title: "Red", func: funcList.red},
    blue: {id: "", title: "Blue", func: funcList.blue},
 
+    //Skills
+    aspush: {id: "", title: "Has Atk/Spd Push 4", func: funcList.aspush},
+
    // Misc
    dancer: {id: "", title: "Dancer", func: funcList.dancer},
    duo: {id: "", title: "Duo Hero", func: funcList.duo},

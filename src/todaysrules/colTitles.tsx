@@ -25,7 +25,10 @@ const day = new Date().getDate();
 
 
 let columnTitles: Constraint[] = [constraints.colorless, constraints.bow_user, constraints.sword];
-if (day === 3) {
-    columnTitles = [constraints.colorless, constraints.colorless, constraints.genealogy]
+if (day === 5) {
+    columnTitles = [constraints.colorless, constraints.bow_user, constraints.sword];
+}
+else if (day === 6) {
+    columnTitles = [constraints.aspush, constraints.fates, constraints.bow_user]
 }
 export default columnTitles

@@ -233,6 +233,14 @@ function has_glimmer(character:Character) {
     }
     return false;
 }
+function aspush(character:Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "Atk/Spd Push 4") {
+            return true;
+        }
+    }
+    return false;
+}
 
 // Misc
 function dancer(character:Character) {
