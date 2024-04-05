@@ -7,7 +7,7 @@ import get_characters from './getcharacters';
 import columnTitles from '@/todaysrules/colTitles';
 import rowTitles from '@/todaysrules/rowTitles';
 import EndgameModal from '@/components/endgameModal';
-
+import { Analytics } from '@vercel/analytics/react';
 
 interface Character {
   name: string;
@@ -258,6 +258,7 @@ export default function Home() {
     {showResutls && 
       <div className="text-white text-center pt-4 text-3xl">Game Over</div>
     }
+    <Analytics/>
     </>
   );
 } 
