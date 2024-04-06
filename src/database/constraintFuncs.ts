@@ -294,6 +294,7 @@ const funcList = {
 
     //Skills
     glimmer: has_glimmer,
+    aspush: aspush,
 
     // Misc
     duo: duo,
