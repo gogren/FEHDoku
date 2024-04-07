@@ -56,8 +56,8 @@ body {
 
 .column-titles {
   display: flex;
-  justify-content: space-between;
-  width: 320px;
+  justify-content: start;
+  width: 500px;
   padding-bottom: 8px;
   color: yellow;
 }
@@ -73,6 +73,7 @@ body {
 }
 
 .grid-container {
+  margin-left: 0 auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -84,4 +85,66 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
+}
+
+.empty-col-div {
+  width: 100px;
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: x-large;
+  }
+  .date {
+    font-size: medium;
+  }
+  .empty-div {
+    width: 0px; /* Width matches column title width */
+  }
+
+  .empty-col-div {
+    width: 125px; /* Width matches column title width */
+  }
+
+  .column-title {
+    width: 75px;
+  }
+
+  .row-title {
+    width: 125px;
+  }
+
+  .square, .trsquare, .tlsquare, .blsquare, .brsquare {
+    width: 75px;
+    height: 75px;
+  }
+
+  .column-titles {
+    width: 375px;
+  }
+}
+
+@media (max-width: 400px) {
+  .empty-div {
+    width: 0px; /* Width matches column title width */
+  }
+
+  .column-title {
+    width: 60px;
+  }
+
+  .empty-col-div {
+    width: 100px; /* Width matches column title width */
+  }
+  .row-title {
+    width: 100px;
+  }
+
+  .square, .trsquare, .tlsquare, .blsquare, .brsquare {
+    width: 60px;
+    height: 60px;
+  }
+  .column-titles {
+    width: 300px;
+  }
 }

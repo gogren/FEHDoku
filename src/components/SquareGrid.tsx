@@ -152,6 +152,8 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
     </div>
   ));
 
+  columnTitleElements.unshift(<div className='empty-col-div'></div>)
+
   return (
     <div className="grid-container">
       <div className="grid">

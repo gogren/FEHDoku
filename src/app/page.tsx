@@ -166,16 +166,16 @@ export default function Home() {
 
   return (
     <>
-    <main className="flex flex-col items-center gap-5 pt-8 overflow-x-auto">
+    <main className="flex flex-col items-center gap-5 pt-8 overflow-x-scroll justify-center">
       <div className="w-5/6">
         <div className="flex items-center justify-between p-2 text-center">
-          <div className="text-5xl text-yellow-300 w-32">FEH-doku</div>
-          <div className="text-2xl text-white w-32 font-sans">
+          <div className="text-5xl text-yellow-300 w-32 title">FEH-doku</div>
+          <div className="text-2xl text-white w-32 font-sans date">
             <div className="">Daily Puzzle</div>
             <div className="">{curDate}</div>
           </div>
           <div className='w-32 items-center text-center'>
-            <div className="flex">
+            <div className="flex flex-col justify-end items-center info">
               <button onClick={() => setInfoMode(true)} className="text-black bg-yellow-300 w-6 rounded-3xl font-bold hover:bg-yellow-500 hover:transform hover:-translate-y-1 transition duration-300">
                 i
               </button>
