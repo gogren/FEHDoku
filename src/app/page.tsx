@@ -166,7 +166,7 @@ export default function Home() {
 
   return (
     <>
-    <main className="flex flex-col items-center gap-5 pt-8">
+    <main className="flex flex-col items-center gap-5 pt-8 overflow-x-auto">
       <div className="w-5/6">
         <div className="flex items-center justify-between p-2 text-center">
           <div className="text-5xl text-yellow-300 w-32">FEH-doku</div>
