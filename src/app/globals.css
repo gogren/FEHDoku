@@ -91,6 +91,15 @@ body {
   width: 100px;
 }
 
+.char-img {
+  width: 48px;
+}
+
+.char-text {
+  font-size: x-small;
+  height: auto;
+}
+
 @media (max-width: 520px) {
   .title {
     font-size: x-large;
@@ -122,6 +131,13 @@ body {
   .column-titles {
     width: 375px;
   }
+  .char-img {
+    width: 36px;
+  }
+  .char-text {
+    font-size: xx-small;
+    line-height: 13px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -146,5 +162,12 @@ body {
   }
   .column-titles {
     width: 300px;
+  }
+  .char-img {
+    width: 28px;
+  }
+  .char-text {
+    font-size: 7px;
+    line-height: 10px;
   }
 }
