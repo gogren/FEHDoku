@@ -19,7 +19,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children }) =
         <div id="wrapper" onClick={handleClose} className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
             <div className="w-[500px]">
                 <div className="bg-white p-2 rounded-md shadow-md flex flex-col">
-                    <button onClick={()=> onClose()} className="text-white bg-red-700 rounded-md shadow-md px-2 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300 place-self-start">Back</button>
+                    <button onClick={()=> onClose()} className="text-gray-600 rounded-md place-self-start text-xl"> X </button>
                     <div className="tect-black place-self-center text-xl">{children}</div>
                 </div>
             </div>
