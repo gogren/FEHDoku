@@ -168,7 +168,10 @@ export default function Home() {
       <div className="text-white flex-col text-center pt-4">Guesses Left: {guesses}</div>
       <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
       {showResutls && 
+      <>
         <div className="text-white text-center pt-4 text-3xl">Game Over</div>
+        <div className="text-white text-center pt2 text-xl">Score: {score}/9</div>
+      </>
       }
       <Analytics/>
     </>
