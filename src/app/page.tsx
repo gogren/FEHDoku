@@ -56,7 +56,7 @@ export default function Home() {
   }
 
   function handleChosenCharacter(character: Character) {
-    setCharSearchMode(false);
+    // setCharSearchMode(false);
     const x = currSquare[0]
     const y = currSquare[1]
     for (let i = 0; i < usedChars.length; i++) {
@@ -108,6 +108,7 @@ export default function Home() {
     setInputText("");
     setSquareID([]);
     decrementGuesses();
+    setCharSearchMode(false);
   }
 
   function decrementGuesses() {
@@ -119,6 +120,7 @@ export default function Home() {
   }
 
   function testScore(curScore: number) {
+    console.log("Search Mode:", charSearchMode);
     console.log("Score",curScore)
     if (curScore === 9) {
       setDidWin(true);
