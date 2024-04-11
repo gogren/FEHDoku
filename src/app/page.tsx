@@ -1,13 +1,13 @@
 'use client';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import SquareGrid from '../components/SquareGrid';
-import InfoModal from '../components/info'
 import CharacterListModal from '../components/characterlistmodal';
 import get_characters from './getcharacters';
 import columnTitles from '@/todaysrules/colTitles';
 import rowTitles from '@/todaysrules/rowTitles';
 import EndgameModal from '@/components/endgameModal';
 import { Analytics } from '@vercel/analytics/react';
+import Header from '@/components/header';
 
 interface Character {
   name: string;
@@ -24,15 +24,12 @@ interface Character {
 }
 
 export default function Home() {
-  const [infoMode, setInfoMode] = useState(false)
   // If you set setCharSearchMode, could also set another state to hold the id of the square clicked on
   const [charSearchMode, setCharSearchMode] = useState(false)
   const [inputText, setInputText] = useState("")
   const [charList, setCharList] = useState<Character[]>([])
-  const [chosenChar, choseChar] = useState<Character>()
   const [currSquare, setSquareID] = useState<number[]>([])
   const [guesses, setGuesses] = useState(9)
-  const [curDate, setDate] = useState("")
   const [isGameOver, setGameOver] = useState(false);
   const [didWin, setDidWin] = useState(false);
   const [score, setScore] = useState(0);
@@ -52,24 +49,14 @@ export default function Home() {
   const [usedChars, setUsedChars] = useState<string[]>([])
   const [usedSquares, setUsedSquares] = useState<number[][]>([[]])
 
-  useEffect(() => {
-    const date = new Date();
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    setDate(`(${month}-${day}-${year})`);
-  }, []);
-
-
   function generate_ten_chars(text: string) {
     const trimmedText = text.trim();
     setInputText(text);
     setCharList(get_characters(trimmedText));
   }
 
-  function handleChosenCharacer(character: Character) {
+  function handleChosenCharacter(character: Character) {
     setCharSearchMode(false);
-    choseChar(character);
     const x = currSquare[0]
     const y = currSquare[1]
     for (let i = 0; i < usedChars.length; i++) {
@@ -78,7 +65,7 @@ export default function Home() {
         return
       }
     }
-    // This shit ugly there gotta be a better way but it works...
+    // This is ugly there gotta be a better way but it works...
     console.log(x,y)
     console.log(columnTitles[y], rowTitles[x])
     if (columnTitles[y].func(character) && rowTitles[x].func(character)){
@@ -134,7 +121,6 @@ export default function Home() {
   function testScore(curScore: number) {
     console.log("Score",curScore)
     if (curScore === 9) {
-      console.log("Won");
       setDidWin(true);
     }
   }
@@ -166,108 +152,25 @@ export default function Home() {
 
   return (
     <>
-    <main className="flex flex-col items-center gap-5 pt-8 overflow-x-scroll justify-center">
-      <div className="w-5/6">
-        <div className="flex items-center justify-between p-2 text-center">
-          <div className="text-5xl text-yellow-300 w-32 title">FEH-doku</div>
-          <div className="text-2xl text-white w-32 font-sans date">
-            <div className="">Daily Puzzle</div>
-            <div className="">{curDate}</div>
-          </div>
-          <div className='w-32 items-center text-center'>
-            <div className="flex flex-col justify-end items-center info">
-              <button onClick={() => setInfoMode(true)} className="text-black bg-yellow-300 w-6 rounded-3xl font-bold hover:bg-yellow-500 hover:transform hover:-translate-y-1 transition duration-300">
-                i
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        {/*Sets curSquare to square id on click
-        This shit ugly but idk how else to do it...*/}
-        <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} 
-        s4={sqaure4contents} s5={sqaure5contents} 
-        s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} 
-        setSquareID={setSquareID} setCharSearchMode={() => {openSquare()}}/>
-      </div>
-    </main>
-    <InfoModal isVisible={infoMode} onClose={() => {setInfoMode(false);}}>
-      <div className="overflow-y-auto max-h-96">
-        <h1 className="text-center text-2xl pt-3 pb-3">Welcome to FEH-Doku!</h1>
-        <hr className="pb-1" />
-        <div className="text-left">
-          <ul className="list-disc text-left">
-            <li className="">
-              <p className='pb-2'>
-                Note: This site is in early development and currently NOT curated for play on mobile devices, please feel free to let me know of any errors you come across.
-              </p>
-              <hr className="" />
-              <div className="pb-2 bg-gray-200">
-                <h2 className="text-center text-2xl pt-2">How to Play</h2>
-                <p>
-                  • Goal is to fill all nine boxes in only nine guesses.
-                </p>
-                <p className="">
-                  • No duplicate heroes.
-                </p>
-                <p>
-                  • No changing your answer.
-                </p>
-                <p className=''>
-                  • Each box will have at least one correct answer, and every puzzle will have a valid solution.
-                </p>
-                <p>
-                  • If a skill is listed as a constraint, heroes must have that skill in their base skill set.
-                </p>
-                <p>
-                  • Harmonic heros' game of origin is only the primary hero's game of origin.
-                </p>
-                <p>
-                  Example: Harmonic Edelgard's origin: Three Houses. Not Radiant Dawn.
-                </p>
-                <p className='pb-2'>
-                  • Singer/Dreamers/etc. are all included in the "Dancers" constraint.
-                </p>
-              </div>
-
-              <hr className="pb-1" />
-              <p className="text-center pb-1">
-                Thank you to u/Kaz_Kirigiri's asset collection for all the character images!
-              </p>
-              </li>
-          </ul>
-        </div>
-        <div className="flex flex-col items-center">
-          <button onClick={()=> setInfoMode(false)} className="text-white bg-red-700 rounded-md shadow-md px-2 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300">Done</button>
-        </div>
-      </div>
-    </InfoModal>
-    <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}}>
-      <form className="flex flex-col items-center">
-        <div className="text-center text-black pb-2">{getTitleStrings()}</div>
-        <input placeholder="Search Character" type="text" value={inputText} onChange={e => {generate_ten_chars(e.target.value);}} className="text-black bg-gray-200 rounded-md shadow-md pl-3 pr-3 border border-black w-[300px]" />
-      </form>
-      <div className="flex flex-col pt-3">
-        {charList.length === 0 && <div className="self-center pt-6">No Characters Found</div>}
-        {charList.map((character) => {
-          return (
-            <button onClick={() => {handleChosenCharacer(character);}} className="flex justify-between border border-black rounded-md shadow-md hover:bg-gray-300">
-              <img src={"/images/" + character.img} className="border border-black rounded-md shadow-md w-12 h-auto" />
-              <div className="p-1">
-                {character.name}
-              </div>
-            </button>
-          )
-        })}
-      </div>
-    </CharacterListModal>
-    <div className="text-white flex-col text-center pt-4">Guesses Left: {guesses}</div>
-    <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}></EndgameModal>
-    {showResutls && 
-      <div className="text-white text-center pt-4 text-3xl">Game Over</div>
-    }
-    <Analytics/>
+      <main className="flex flex-col items-center overflow-x-scroll justify-center">
+        <Header/>
+          {/*Sets curSquare to square id on click
+          This is ugly but idk how else to do it...*/}
+          <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} 
+          s4={sqaure4contents} s5={sqaure5contents} 
+          s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} 
+          setSquareID={setSquareID} setCharSearchMode={() => {openSquare()}}/>
+      </main>
+      {/*Could put info modal in header component... */}
+      <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} 
+      getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter}
+      inputText={inputText} charList={charList}/>
+      <div className="text-white flex-col text-center pt-4">Guesses Left: {guesses}</div>
+      <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
+      {showResutls && 
+        <div className="text-white text-center pt-4 text-3xl">Game Over</div>
+      }
+      <Analytics/>
     </>
   );
 } 

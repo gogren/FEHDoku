@@ -1,6 +1,3 @@
-import { channel } from "diagnostics_channel";
-import characters from "./characters";
-
 interface Character {
     name: string;
     origin: number;
@@ -169,6 +166,12 @@ function sword(character:Character){
     }
     return false 
 }
+function dragon(character: Character) {
+    return (character.weapon === 'dragon');
+}
+function tome(character: Character) {
+    return (character.weapon === 'tome');
+}
 
 // Colors
 function is_colorless(character:Character) {
@@ -253,6 +256,18 @@ function duo(character:Character) {
     return character.duo;
 }
 
+// Weapon color combos
+function red_tome(character: Character) {
+    return (red(character) && tome(character));
+}
+function green_tome(character: Character) {
+    return (green(character) && tome(character));
+}
+function blue_tome(character: Character) {
+    return (blue(character) && tome(character));
+}
+
+
 // Export
 const funcList = {
     // Origins DONE
@@ -280,6 +295,8 @@ const funcList = {
     //Weapon Types
     bow: has_bow,
     sword: sword,
+    dragon: dragon,
+    tome: tome,
     
     //Colors
     colorless: is_colorless,
@@ -300,6 +317,11 @@ const funcList = {
     duo: duo,
     harmonic: harmonic,
     dancer: dancer,
+
+    // Weapon Color combos:
+    red_tome: red_tome,
+    green_tome: green_tome,
+    blue_tome: blue_tome,
 };
 
 export default funcList

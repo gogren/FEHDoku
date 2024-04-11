@@ -23,10 +23,16 @@ const day = new Date().getDate();
 
 let rowTitles:Constraint[] = [constraints.flying, constraints.duo, constraints.three_houses]
 
-if (day === 5) {
+if (day === 11) {
     rowTitles = [constraints.flying, constraints.duo, constraints.three_houses]
 }
-else if (day === 6) {
+else if (day === 12) {
     rowTitles = [constraints.flying, constraints.green, constraints.dancer]
+}
+else if (day === 13) {
+    rowTitles = [constraints.harmonic, constraints.fates, constraints.red]
+}
+else if (day === 14) {
+    rowTitles = [constraints.infantry, constraints.cav, constraints.flying]
 }
 export default rowTitles

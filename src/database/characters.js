@@ -743,7 +743,12 @@ const characters = [
     {name: 'Fallen Muarim', origin: 9, moveType: 'inf', weapon: 'beast', color: 'blue', rarity: [3,4], skills: [], img: '/RD/Muarim%20-%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false},
 
     // 10 - FE Awakening
-
+    
+    {name: 'Young Emmeryn', origin: 10, moveType: 'inf', weapon: 'staff', color: 'colorless', rarity: [5], skills: [], img: '/Awakening/YEmmeryn/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Young Lissa', origin: 10, moveType: 'inf', weapon: 'axe', color: 'green', rarity: [4,5], skills: [], img: '/Awakening/YLissa/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Young Frederick', origin: 10, moveType: 'cav', weapon: 'axe', color: 'green', rarity: [4,5], skills: [], img: '/Awakening/YFredrick/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Young Robin(F)', origin: 10, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/Awakening/YRobinF/Face_FC.webp', duo: true, harmonic: false, dancer: false},
+    {name: 'Young Robin(M)', origin: 10, moveType: 'inf', weapon: 'tome', color: 'red', rarity: [5], skills: [], img: '/Awakening/YRobinM/Face_FC.webp', duo: false, harmonic: false, dancer: false},
     {name: 'Miriel', origin: 10, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [3,4], skills: [], img: '/Awakening/Miriel/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Summer Gaius', origin: 10, moveType: 'inf', weapon: 'bow', color: 'colorless', rarity: [5], skills: [], img: '/Awakening/Gaius%20-%20Summer/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Groom Robin', origin: 10, moveType: 'cav', weapon: 'tome', color: 'red', rarity: [4,5], skills: [], img: '/Awakening/Robin%20-%20M%20Wedding/Face_FC.png', duo: false, harmonic: false, dancer: false},

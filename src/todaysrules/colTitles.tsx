@@ -19,16 +19,20 @@ interface Constraint {
     title: string;
     func: (character: Character) => boolean
 }
-
-// Try to dynamically change the contraints based on what day it is.
 const day = new Date().getDate();
 
 
 let columnTitles: Constraint[] = [constraints.colorless, constraints.bow_user, constraints.sword];
-if (day === 5) {
+if (day === 11) {
     columnTitles = [constraints.colorless, constraints.bow_user, constraints.sword];
 }
-else if (day === 6) {
+else if (day === 12) {
     columnTitles = [constraints.aspush, constraints.fates, constraints.bow_user]
+}
+else if (day === 13) {
+    columnTitles = [constraints.armor, constraints.dragon, constraints.sword]
+}
+else if (day === 14) {
+    columnTitles = [constraints.red_tome, constraints.blue_tome, constraints.green_tome]
 }
 export default columnTitles

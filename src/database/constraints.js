@@ -29,6 +29,8 @@ const constraints = {
    // Weapon Type
    bow_user: {id: "", title: "Bow User", func: funcList.bow},
    sword: {id: "", title: "Sword User", func: funcList.sword},
+   dragon: {id: "", title: "Dragon/Breath Unit", func: funcList.dragon},
+   tome: {id: "", titel: "Tome User", func: funcList.tome},
 
    // Color
    colorless: {id: "", title: "Colorless", func: funcList.colorless},
@@ -43,6 +45,11 @@ const constraints = {
    dancer: {id: "", title: "Dancer", func: funcList.dancer},
    duo: {id: "", title: "Duo Hero", func: funcList.duo},
    harmonic: {id: "", title: "Harmonic Hero", func: funcList.harmonic},
+
+   // Weapon color combo:
+   red_tome: {id: "", title: "Red Tome Unit", func: funcList.red_tome},
+   blue_tome: {id: "", title: "Blue Tome Unit", func: funcList.blue_tome},
+   green_tome: {id: "", title: "Green Tome Unit", func: funcList.green_tome},
 };
 
 for (let i = 0; i < constraints.length; i++) {

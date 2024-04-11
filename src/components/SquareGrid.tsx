@@ -1,3 +1,4 @@
+
 import React from 'react';
 import columnTitles from '@/todaysrules/colTitles';
 import rowTitles from '@/todaysrules/rowTitles';
@@ -155,7 +156,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
   columnTitleElements.unshift(<div className='empty-col-div'></div>)
 
   return (
-    <div className="grid-container">
+    <div className="grid-container pt-12">
       <div className="grid">
         {/* Empty divs for alignment */}
         <div className="empty-div" />
