@@ -23,9 +23,10 @@ interface InfoModalProps {
     handleChosenCharacter: (char: Character) => void;
     inputText: string;
     charList: Character[];
+    usedChars: string[];
 }
 // Take in sqaure ID and its constraints as args?
-const CharacterListModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children, generate_ten_chars, getTitleStrings, handleChosenCharacter, inputText, charList }) => {
+const CharacterListModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children, generate_ten_chars, getTitleStrings, handleChosenCharacter, inputText, charList, usedChars }) => {
     if (!isVisible ) return null;
     // Without this, modal will close if you tap anywhere
     const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -47,8 +48,9 @@ const CharacterListModal: React.FC<InfoModalProps> = ({ isVisible, onClose, chil
                         <div className="flex flex-col pt-3">
                             {charList.length === 0 && <div className="self-center pt-6">No Characters Found</div>}
                             {charList.map((character) => {
+                            const isUsed = usedChars.includes(character.name);
                             return (
-                                <button onClick={() => {handleChosenCharacter(character);}} className="flex justify-between border border-black rounded-md shadow-md hover:bg-gray-300">
+                                <button onClick={() => {handleChosenCharacter(character);}} className={`flex justify-between border border-black rounded-md shadow-md hover:bg-gray-300 ${isUsed ? 'text-gray-500 line-through' : ''}`}>
                                 <img src={"/images/" + character.img} className="border border-black rounded-md shadow-md w-12 h-auto" />
                                 <div className="p-1">
                                     {character.name}

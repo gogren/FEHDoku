@@ -171,7 +171,7 @@ export default function Home() {
       {/*Could put info modal in header component... */}
       <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} 
       getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter}
-      inputText={inputText} charList={charList}/>
+      inputText={inputText} charList={charList} usedChars={usedChars}/>
       <div className="text-white flex-col text-center pt-4">Guesses Left: {guesses}</div>
       <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
       {showResutls && 
