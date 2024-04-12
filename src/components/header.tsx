@@ -30,7 +30,7 @@ const Header = () => {
                     <div className="text-5xl text-yellow-200 hover:text-yellow-400 w-1/3 title font-extrabold hover:transform hover:-translate-y-1 hover:underline transition duration-200">FEH-doku</div>
                     <div className='w-1/3 h-full flex flex-row items-center text-center'>
                         <div className="w-1/2 h-full flex justify-center items-center">
-                            <button className="p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
+                            <button className="sm:p-1 md:p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
                                 <a href="https://www.buymeacoffee.com/trentjkelly">Buy me a coffee!</a>
                             </button>
                         </div>
