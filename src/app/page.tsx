@@ -140,15 +140,20 @@ export default function Home() {
     }
   }
   
-  function openSquare() {
+  function openSquare(k: number, j: number) {
+    console.log("Used Squares:", usedSquares)
+    console.log("Curr Square", currSquare)
+    console.log("Vals", k, j);
     if (guesses > 0) {
       for (let i = 0; i < usedSquares.length; i ++) {
-        if (usedSquares[i][0] === currSquare[0] && usedSquares[i][1] === currSquare[1]) {
+        if (usedSquares[i][0] === k && usedSquares[i][1] === j) {
+          console.log(usedSquares, currSquare);
           return
         }
       }
       setCharSearchMode(true); 
       generate_ten_chars("");
+      console.log("Set search mode to true");
     }
   }
 
@@ -161,7 +166,7 @@ export default function Home() {
           <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} 
           s4={sqaure4contents} s5={sqaure5contents} 
           s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} 
-          setSquareID={setSquareID} setCharSearchMode={() => {openSquare()}}/>
+          setSquareID={setSquareID} setCharSearchMode={openSquare}/>
       </main>
       {/*Could put info modal in header component... */}
       <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} 

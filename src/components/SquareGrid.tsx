@@ -4,7 +4,7 @@ import columnTitles from '@/todaysrules/colTitles';
 import rowTitles from '@/todaysrules/rowTitles';
 
 interface SquareGridProps {
-  setCharSearchMode: () => void;
+  setCharSearchMode: (i: number, j: number) => void;
   setSquareID: (id: number[]) => void;
   s1: string[];
   s2: string[];
@@ -25,7 +25,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       if (i === 0 && j === 0) {
           // Could useState to store square id, then on close set useState to ""
           row.push(
-            <button  onClick={() => {setCharSearchMode(); setSquareID([i,j])}} key={`${i}-${j}`} className="tlsquare">
+            <button  onClick={() => {setCharSearchMode(i,j); setSquareID([i,j]);}} key={`${i}-${j}`} className="tlsquare">
               <div className="flex flex-col items-center">
                 {s1[1] !== "" ? (
                 <img src={"../images/" + s1[1]} alt="" className='h-auto pb-1 rounded-md char-img'/>
@@ -37,7 +37,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 0 && j === 1) {
         row.push(
-          <button onClick={() => {setCharSearchMode(); setSquareID([i,j])}} key={`${i}-${j}`} className="square">
+          <button onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} key={`${i}-${j}`} className="square">
           <div className="flex flex-col items-center">
             {s2[1] !== "" ? (
               <img src={"../images/" + s2[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -49,7 +49,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 0 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="trsquare">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="trsquare">
           <div className="flex flex-col items-center">
             {s3[1] !== "" ? (
                 <img src={"../images/" + s3[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -61,7 +61,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 1 && j === 0) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="square">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
           <div className="flex flex-col items-center">
             {s4[1] !== "" ? (
                 <img src={"../images/" + s4[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -73,7 +73,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 1 && j === 1) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="square">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
           <div className="flex flex-col items-center">
             {s5[1] !== "" ? (
                 <img src={"../images/" + s5[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -85,7 +85,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 1 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="square">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
           <div className="flex flex-col items-center">
             {s6[1] !== "" ? (
                 <img src={"../images/" + s6[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -97,7 +97,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 2 && j === 0) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="blsquare">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="blsquare">
           <div className="flex flex-col items-center">
             {s7[1] !== "" ? (
                 <img src={"../images/" + s7[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -109,7 +109,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 2 && j === 1) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="square">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
           <div className="flex flex-col items-center">
             {s8[1] !== "" ? (
                 <img src={"../images/" + s8[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
@@ -121,7 +121,7 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       }
       else if (i === 2 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(); setSquareID([i,j])}} className="brsquare">
+          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="brsquare">
           <div className="flex flex-col items-center">
             {s9[1] !== "" ? (
                 <img src={"../images/" + s9[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
