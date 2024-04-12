@@ -1,14 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  background-color: rgb(30 41 59);
+  /* background-color: rgb(30 41 59); */
   /* --tw-bg-opacity: 1;
   background-color: rgb(23 37 84 / var(--tw-bg-opacity)); */
   /* background-color: #2e2e2e; */
   /* --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity)); */
+  font-family: "Montserrat", sans-serif
 }
 
 .row {
@@ -18,7 +20,7 @@ body {
 .square, .trsquare, .tlsquare, .blsquare, .brsquare {
   width: 100px;
   height: 100px;
-  border: 1px solid yellow;
+  border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +29,7 @@ body {
 }
 
 .square:hover, .trsquare:hover, .tlsquare:hover, .blsquare:hover, .brsquare:hover {
-  background-color: lightgray;
+  background-color: rgb(254, 249, 195);
 }
 
 .trsquare {
@@ -51,7 +53,7 @@ body {
   text-align: center; /* Align text to the center */
   display: flex;
   align-items: center; /* Vertically center the text */
-  color: yellow
+  color: black;
 }
 
 
@@ -64,7 +66,7 @@ body {
   justify-content: start;
   width: 500px;
   padding-bottom: 8px;
-  color: yellow;
+  color: black;
 }
 
 .column-title {

@@ -68,6 +68,8 @@ export default function Home() {
     // This is ugly there gotta be a better way but it works...
     console.log(x,y)
     console.log(columnTitles[y], rowTitles[x])
+
+    // User's square guess was correct
     if (columnTitles[y].func(character) && rowTitles[x].func(character)){
       if (x === 0 && y === 0) {
         setSquare1Contents([character.name, character.img])
@@ -158,29 +160,31 @@ export default function Home() {
   }
 
   return (
-    <>
-      <main className="flex flex-col items-center overflow-x-scroll justify-center">
-        <Header/>
-          {/*Sets curSquare to square id on click
-          This is ugly but idk how else to do it...*/}
-          <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} 
-          s4={sqaure4contents} s5={sqaure5contents} 
-          s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} 
-          setSquareID={setSquareID} setCharSearchMode={openSquare}/>
-      </main>
-      {/*Could put info modal in header component... */}
-      <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} 
-      getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter}
-      inputText={inputText} charList={charList} usedChars={usedChars}/>
-      <div className="text-white flex-col text-center pt-4">Guesses Left: {guesses}</div>
-      <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
-      {showResutls && 
-      <>
-        <div className="text-white text-center pt-4 text-3xl">Game Over</div>
-        <div className="text-white text-center pt2 text-xl">Score: {score}/9</div>
-      </>
-      }
-      <Analytics/>
-    </>
-  );
+    <main className="h-screen w-full bg-slate-800 flex flex-col items-center overflow-x-scroll justify-center">
+      {/* Header */}
+      <Header></Header>
+
+      {/* Main section */}
+      <div className="w-11/12 h-full bg-slate-200 rounded-tl-3xl rounded-tr-3xl">
+        
+        <div className="w-full pb-20"></div>
+        <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} s4={sqaure4contents} s5={sqaure5contents} s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} setSquareID={setSquareID} setCharSearchMode={openSquare}/>
+        
+        <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter} inputText={inputText} charList={charList} usedChars={usedChars}/>
+        
+        <div className="text-slate-800 flex-col text-center pt-4 font-bold">Guesses Left: {guesses}</div>
+        
+        <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
+        
+        {showResutls && 
+          <>
+            <div className="text-white text-center pt-4 text-3xl">Game Over</div>
+            <div className="text-white text-center pt2 text-xl">Score: {score}/9</div>
+          </>
+        }
+
+        <Analytics/>
+      </div>
+    </main>
+  )
 } 

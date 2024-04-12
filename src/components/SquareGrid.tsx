@@ -1,7 +1,7 @@
-
 import React from 'react';
 import columnTitles from '@/todaysrules/colTitles';
 import rowTitles from '@/todaysrules/rowTitles';
+import Square from './Square';
 
 interface SquareGridProps {
   setCharSearchMode: (i: number, j: number) => void;
@@ -25,110 +25,47 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       if (i === 0 && j === 0) {
           // Could useState to store square id, then on close set useState to ""
           row.push(
-            <button  onClick={() => {setCharSearchMode(i,j); setSquareID([i,j]);}} key={`${i}-${j}`} className="tlsquare">
-              <div className="flex flex-col items-center">
-                {s1[1] !== "" ? (
-                <img src={"../images/" + s1[1]} alt="" className='h-auto pb-1 rounded-md char-img'/>
-                ) : null}
-                <div className="text-white text-xs text-center char-text">{s1[0]}</div>
-              </div>
-            </button>
+            <Square i={i} j={j} square={s1} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
           );
       }
       else if (i === 0 && j === 1) {
         row.push(
-          <button onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} key={`${i}-${j}`} className="square">
-          <div className="flex flex-col items-center">
-            {s2[1] !== "" ? (
-              <img src={"../images/" + s2[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-            ) : null}
-            <div className="text-white text-xs text-center char-text">{s2[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s2} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 0 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="trsquare">
-          <div className="flex flex-col items-center">
-            {s3[1] !== "" ? (
-                <img src={"../images/" + s3[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s3[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s3} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
       else if (i === 1 && j === 0) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
-          <div className="flex flex-col items-center">
-            {s4[1] !== "" ? (
-                <img src={"../images/" + s4[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s4[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s4} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 1 && j === 1) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
-          <div className="flex flex-col items-center">
-            {s5[1] !== "" ? (
-                <img src={"../images/" + s5[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s5[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s5} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 1 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
-          <div className="flex flex-col items-center">
-            {s6[1] !== "" ? (
-                <img src={"../images/" + s6[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s6[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s6} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 2 && j === 0) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="blsquare">
-          <div className="flex flex-col items-center">
-            {s7[1] !== "" ? (
-                <img src={"../images/" + s7[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s7[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s7} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
       else if (i === 2 && j === 1) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="square">
-          <div className="flex flex-col items-center">
-            {s8[1] !== "" ? (
-                <img src={"../images/" + s8[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s8[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s8} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 2 && j === 2) {
         row.push(
-          <button key={`${i}-${j}`} onClick={() => {setCharSearchMode(i,j); setSquareID([i,j])}} className="brsquare">
-          <div className="flex flex-col items-center">
-            {s9[1] !== "" ? (
-                <img src={"../images/" + s9[1]} alt="" className='char-img h-auto pb-1 rounded-md'/>
-              ) : null}
-            <div className="text-white text-xs text-center char-text">{s9[0]}</div>
-          </div>
-        </button>
+          <Square i={i} j={j} square={s9} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
     }

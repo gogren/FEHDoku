@@ -21,23 +21,27 @@ const Header = () => {
 
     return (
         <>
-            <div className="w-screen">
-                <div className="flex items-center justify-evenly p-4 text-center">
-                    <div className="text-5xl text-yellow-300 w-32 title">FEH-doku</div>
-                    <div className="text-2xl text-white w-48 font-sans date">
-                        <div className="">Daily Puzzle</div>
-                        <div className="">{curDate}</div>
+            <div className="w-screen h-32">
+                <div className="h-full flex items-center justify-evenly p-4 text-center">
+                    <div className="text-md text-white hover:text-yellow-400 w-1/3 font-sans date hover:transform hover:-translate-y-1 transition duration-200">
+                        <div className="font-medium">Daily Puzzle</div>
+                        <div className="font-medium">{curDate}</div>
                     </div>
-                    <div className='w-32 items-center text-center'>
-                        <div className="flex flex-col justify-end items-center info">
-                            <button onClick={() => setInfoMode(true)} className="text-black bg-yellow-300 w-6 rounded-3xl font-bold hover:bg-yellow-500 hover:transform hover:-translate-y-1 transition duration-300">
+                    <div className="text-5xl text-yellow-200 hover:text-yellow-400 w-1/3 title font-extrabold hover:transform hover:-translate-y-1 hover:underline transition duration-200">FEH-doku</div>
+                    <div className='w-1/3 h-full flex flex-row items-center text-center'>
+                        <div className="w-1/2 h-full flex justify-center items-center">
+                            <button className="p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
+                                <a href="https://www.buymeacoffee.com/trentjkelly">Buy me a coffee!</a>
+                            </button>
+                        </div>
+                        <div className="w-1/2 h-full flex flex-col justify-center items-center info">
+                            <button onClick={() => setInfoMode(true)} className="text-black bg-slate-200 w-6 rounded-3xl font-bold hover:bg-yellow-400 hover:transform hover:-translate-y-1 transition duration-300">
                                 i
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="w-screen h-0.5 bg-yellow-300"></div>
             <InfoModal isVisible={infoMode} onClose={() => {setInfoMode(false);}}></InfoModal>
         </>
     )
