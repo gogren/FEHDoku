@@ -28,7 +28,7 @@ const Square: React.FC<SquareProps> = ({ i, j, square, setCharSearchMode, setSqu
                 {square[1] !== "" ? (
                     <>
                         <img src={`../images/${square[1]}`} alt="" className='h-auto pb-1 rounded-md char-img'/>
-                        <div className="text-white text-xs text-center char-text">{"Frequency: 69%"}</div>
+                        {/* <div className="text-white text-xs text-center char-text">{"Frequency: 69%"}</div> */}
                     </>
                 ) : null}
                 <div className="text-white text-xs text-center char-text">{square[0]}</div>

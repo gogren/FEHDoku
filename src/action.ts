@@ -32,5 +32,3 @@ export async function incrementSquareTotalGuesses() {
 export async function incrementCharacterGuesses() {
     const supabase = createClient();
 }
-
-export
