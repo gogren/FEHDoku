@@ -162,11 +162,14 @@ body {
   }
 
   .column-title {
-    width: 80px;
+    width: 60px;
     font-size: 10px;
   }
   .column-titles {
-    width: 320px;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
   .empty-col-div {
     width: 80px; /* Width matches column title width */
