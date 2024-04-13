@@ -28,34 +28,37 @@ const InfoModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children }) =
                             <ul className="list-disc text-left">
                                 <li className="">
                                 <p className='pb-2'>
-                                    Note: This site is in early development and currently NOT curated for play on mobile devices, please feel free to let me know of any errors you come across.
+                                    Note: This site is in early development, please feel free to let me know of any errors you come across.
                                 </p>
                                 <hr className="" />
-                                <div className="pb-2 bg-gray-200">
+                                <div className="pb-2 bg-gray-200 px-2 rounded-md">
                                     <h2 className="text-center text-2xl pt-2">How to Play</h2>
-                                    <p>
+                                    <p className="pb-1">
                                     • Goal is to fill all nine boxes in only nine guesses.
                                     </p>
-                                    <p className="">
+                                    <p className="pb-1">
                                     • No duplicate heroes.
                                     </p>
-                                    <p>
+                                    <p className="pb-1">
                                     • No changing your answer.
                                     </p>
-                                    <p className=''>
+                                    <p className='pb-1'>
                                     • Each box will have at least one correct answer, and every puzzle will have a valid solution.
                                     </p>
-                                    <p>
+                                    <p className="pb-1">
                                     • If a skill is listed as a constraint, heroes must have that skill in their base skill set.
                                     </p>
-                                    <p>
+                                    <p className="">
                                     • Harmonic heros' game of origin is only the primary hero's game of origin.
                                     </p>
-                                    <p>
+                                    <p className="pb-1">
                                     Example: Harmonic Edelgard's origin: Three Houses. Not Radiant Dawn.
                                     </p>
+                                    <p className="pb-1">
+                                    • Harmonic heroes are not incuded in the "Duo Hero" constraint, and vice versa.
+                                    </p>
                                     <p className='pb-2'>
-                                    • Singer/Dreamers/etc. are all included in the "Dancers" constraint.
+                                    • Singers/Dreamers/etc. are all included in the "Dancers" constraint.
                                     </p>
                                 </div>
 
@@ -66,7 +69,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children }) =
                                 </li>
                             </ul>
                             </div>
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center pb-2">
                             <button onClick={()=> onClose()} className="text-white bg-red-700 rounded-md shadow-md px-2 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300">Done</button>
                             </div>
                         </div>  

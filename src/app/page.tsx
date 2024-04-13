@@ -178,8 +178,8 @@ export default function Home() {
         
         {showResutls && 
           <>
-            <div className="text-white text-center pt-4 text-3xl">Game Over</div>
-            <div className="text-white text-center pt2 text-xl">Score: {score}/9</div>
+            <div className="text-black text-center pt-4 text-3xl">Game Over</div>
+            <div className="text-black text-center pt2 text-xl">Score: {score}/9</div>
           </>
         }
 

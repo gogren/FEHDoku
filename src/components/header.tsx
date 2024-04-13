@@ -23,14 +23,14 @@ const Header = () => {
         <>
             <div className="w-screen h-32">
                 <div className="h-full flex items-center justify-evenly p-4 text-center">
-                    <div className="text-md text-white hover:text-yellow-400 w-1/3 font-sans date hover:transform hover:-translate-y-1 transition duration-200">
-                        <div className="font-medium">Daily Puzzle</div>
-                        <div className="font-medium">{curDate}</div>
+                    <div className="datetext text-md text-white font-medium hover:text-yellow-400 w-1/3 font-sans date hover:transform hover:-translate-y-1 transition duration-200">
+                        <div className="">Daily Puzzle</div>
+                        <div className="">{curDate}</div>
                     </div>
                     <div className="text-5xl text-yellow-200 hover:text-yellow-400 w-1/3 title font-extrabold hover:transform hover:-translate-y-1 hover:underline transition duration-200">FEH-doku</div>
                     <div className='w-1/3 h-full flex flex-row items-center text-center'>
                         <div className="w-1/2 h-full flex justify-center items-center">
-                            <button className="sm:p-1 md:p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
+                            <button className="coffeebutton sm:p-1 md:p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
                                 <a href="https://www.buymeacoffee.com/trentjkelly">Buy me a coffee!</a>
                             </button>
                         </div>

@@ -145,9 +145,16 @@ body {
     font-size: xx-small;
     line-height: 13px;
   }
+  .coffeebutton {
+    font-size: x-small;
+  }
 }
 
 @media (max-width: 400px) {
+  .datetext {
+    font-size: small;
+  }
+
   .empty-div {
     width: 0px; /* Width matches column title width */
   }

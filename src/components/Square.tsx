@@ -31,7 +31,7 @@ const Square: React.FC<SquareProps> = ({ i, j, square, setCharSearchMode, setSqu
                         {/* <div className="text-white text-xs text-center char-text">{"Frequency: 69%"}</div> */}
                     </>
                 ) : null}
-                <div className="text-white text-xs text-center char-text">{square[0]}</div>
+                <div className="text-black text-xs text-center char-text">{square[0]}</div>
             </div>
         </button>
     );
