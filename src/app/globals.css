@@ -147,6 +147,9 @@ body {
   }
   .coffeebutton {
     font-size: x-small;
+    line-height: 13px;
+    padding-left: 4px;
+    padding-right: 4px; 
   }
 }
 
@@ -154,7 +157,6 @@ body {
   .datetext {
     font-size: small;
   }
-
   .empty-div {
     width: 0px; /* Width matches column title width */
   }
