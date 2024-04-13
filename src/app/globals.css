@@ -162,14 +162,18 @@ body {
   }
 
   .column-title {
-    width: 60px;
+    width: 80px;
+    font-size: 10px;
   }
-
+  .column-titles {
+    width: 320px;
+  }
   .empty-col-div {
-    width: 100px; /* Width matches column title width */
+    width: 80px; /* Width matches column title width */
   }
   .row-title {
-    width: 100px;
+    font-size: 10px;
+    width: 80px;
   }
 
   .square, .trsquare, .tlsquare, .blsquare, .brsquare {
