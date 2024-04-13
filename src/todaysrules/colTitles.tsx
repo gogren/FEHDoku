@@ -35,4 +35,10 @@ else if (day === 13) {
 else if (day === 14) {
     columnTitles = [constraints.red_tome, constraints.blue_tome, constraints.green_tome]
 }
+else if (day === 15) {
+    columnTitles = [constraints.asclash3, constraints.cav, constraints.radiant_dawn]
+}
+else if (day === 16) {
+    columnTitles = [constraints.dagger, constraints.axe, constraints.staff]
+}
 export default columnTitles

@@ -24,7 +24,7 @@ const Square: React.FC<SquareProps> = ({ i, j, square, setCharSearchMode, setSqu
     // Actual component
     return (
         <button onClick={() => { setCharSearchMode(i, j); setSquareID([i, j]); }} className={`${roundedCorner}`}>
-            <div className={`flex flex-col items-center`}>
+            <div className={`flex flex-col items-center hover:scale-110 transition-transform duration-300`}>
                 {square[1] !== "" ? (
                     <>
                         <img src={`../images/${square[1]}`} alt="" className='h-auto pb-1 rounded-md char-img'/>

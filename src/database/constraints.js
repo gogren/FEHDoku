@@ -27,10 +27,15 @@ const constraints = {
     flying: {id: "", title: "Flying Unit", func: funcList.flying},
 
    // Weapon Type
+   staff: {id: "", title: 'Staff User', func: funcList.staff},
+   axe: {id: "", title: 'Axe User', func: funcList.axe},
+   dagger: {id: "", title: "Dagger User", func: funcList.dagger},
+   lance: {id: "", title: "Lance User", func: funcList.lance},
    bow_user: {id: "", title: "Bow User", func: funcList.bow},
    sword: {id: "", title: "Sword User", func: funcList.sword},
    dragon: {id: "", title: "Dragon/Breath Unit", func: funcList.dragon},
-   tome: {id: "", titel: "Tome User", func: funcList.tome},
+   tome: {id: "", title: "Tome User", func: funcList.tome},
+   beast: {id: "", title: "Beast Unit", func: funcList.beast},
 
    // Color
    colorless: {id: "", title: "Colorless", func: funcList.colorless},
@@ -40,6 +45,7 @@ const constraints = {
 
     //Skills
     aspush: {id: "", title: "Has Atk/Spd Push 4", func: funcList.aspush},
+    asclash3: {id: "", title: "Has Atk/Spd Clash 3", func: funcList.asclash3},
 
    // Misc
    dancer: {id: "", title: "Dancer", func: funcList.dancer},

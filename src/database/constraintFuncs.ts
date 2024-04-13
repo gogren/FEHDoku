@@ -152,10 +152,23 @@ function flying(character: Character) {
     return false; 
 }
 // Weapon Types
+function staff(character: Character) {
+    return (character.weapon === 'staff');
+}
+function axe(character: Character) {
+    return (character.weapon === 'axe');
+}
+function dagger(character: Character) {
+    return (character.weapon === 'dagger');
+}
+function lance(character: Character) {
+    return (character.weapon === "lance");
+}
+function beast(character: Character) {
+    return (character.weapon === 'beast');
+}
 function has_bow(character:Character) {
-    console.log("HERE")
     if (character.weapon === 'bow') {
-        console.log("True")
         return true;
     }
     return false; 
@@ -244,6 +257,14 @@ function aspush(character:Character) {
     }
     return false;
 }
+function asclash3(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "Atk/Spd Clash 3") {
+            return true;
+        }
+    }
+    return false;
+}
 
 // Misc
 function dancer(character:Character) {
@@ -266,6 +287,8 @@ function green_tome(character: Character) {
 function blue_tome(character: Character) {
     return (blue(character) && tome(character));
 }
+
+// Color movement combos:
 
 
 // Export
@@ -293,9 +316,14 @@ const funcList = {
     infantry: infantry,
     flying: flying,
     //Weapon Types
+    axe: axe,
+    staff: staff,
+    dagger: dagger,
+    lance: lance,
     bow: has_bow,
     sword: sword,
     dragon: dragon,
+    beast: beast,
     tome: tome,
     
     //Colors
@@ -312,7 +340,7 @@ const funcList = {
     //Skills
     glimmer: has_glimmer,
     aspush: aspush,
-
+    asclash3: asclash3,
     // Misc
     duo: duo,
     harmonic: harmonic,
@@ -322,6 +350,8 @@ const funcList = {
     red_tome: red_tome,
     green_tome: green_tome,
     blue_tome: blue_tome,
+
+    // Color Movement combos:
 };
 
 export default funcList

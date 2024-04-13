@@ -10,6 +10,8 @@ const marcos = {
     // A skills
     deathblow3: ['Death Blow 1', 'Death Blow 2', 'Death Blow 3'],
     aspush4: ['Atk/Spd Push 1','Atk/Spd Push 3','Atk/Spd Push 3','Atk/Spd Push 4'],
+    asclash4: ['Atk/Spd Clash 3', 'Atk/Spd Clash 4'],
+
     // B Skills
     lullspddef3: ['Lull Spd/Def 1', 'Lull Spd/Def 2', 'Lull Spd/Def 3'],
 
