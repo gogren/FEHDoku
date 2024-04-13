@@ -1,4 +1,19 @@
 import marcos from "./marcos"
+
+interface Character {
+    name: string;
+    origin: number;
+    moveType: string;
+    weapon: string;
+    color: string;
+    rarity: number[];
+    skills: string[];
+    img: string;
+    dancer: boolean;
+    duo: boolean
+    harmonic: boolean;
+}
+
 /* Games: 
 0 - FE Shadow Dragon and the Blade of Light
 1 - FE Gaiden / Mystery
@@ -28,7 +43,7 @@ const fc = 'Face_FC.png';
 //Swords
 //Lances
 
-const characters = [
+const characters: Character[] = [
     // Heroes
     {name: "Alfonse", origin: 15, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [4], skills: ["Folkvangr", ...marcos.baseSwords, ...marcos.sol, ...marcos.deathblow3, ...marcos.spuratk3], img: "Heroes/Alfonse/Face_FC.png", duo: false, harmonic: false, dancer: false},
     {name: "New Years Alfonse", origin: 15, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [4,5], skills: [], img: "Heroes/Alfonse%20-%20New%20Years%20Duo/" + fc, duo: true, harmonic: false, dancer: false},
@@ -101,7 +116,7 @@ const characters = [
     {name: 'Helbindi', origin: 15, moveType: 'inf', weapon: 'axe', color: 'green', rarity: [5], skills: [], img: '/Heroes/Helbindi/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'New Years Peony', origin: 15, moveType: 'fly', weapon: 'tome', color: 'green', rarity: [5], skills: [], img: '/Heroes/Peony%20-%20New%20Year%20Duo/Face_FC.png', duo: true, harmonic: false, dancer: true},
     {name: 'Summer Nifl', origin: 15, moveType: 'cav', weapon: 'dragon', color: 'colorless', rarity: [5], skills: [], img: '/Heroes/Nifl%20-%20Summer/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Nerþuz', origin: 15, moveType: 'cav', weapon: 'beast', color: 'blue', rarity: [5], skills: [...marcos.asclash4], img: '/Heroes/Ner%C3%BEuz/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Nerþuz', origin: 15, moveType: 'cav', weapon: 'beast', color: 'blue', rarity: [5], skills: [...marcos.asclash4, "Galeforce"], img: '/Heroes/Ner%C3%BEuz/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Otr', origin: 15, moveType: 'cav', weapon: 'axe', color: 'green', rarity: [5], skills: [], img: '/Heroes/%C3%93tr/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Bridal Fjorm', origin: 15, moveType: 'fly', weapon: 'staff', color: 'colorless', rarity: [5], skills: [], img: '/Heroes/Fjorm%20-%20Wedding/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Mythic Freyr', origin: 15, moveType: 'cav', weapon: 'beast', color: 'blue', rarity: [5], skills: [], img: '/Heroes/Freyr%20-%20Mythic/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -272,7 +287,7 @@ const characters = [
     {name: 'Mae', origin: 1, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [3,4], skills: [], img: '/Gaiden/Mae/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Kliff', origin: 1, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/Gaiden/Kliff/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Picnic Lukas', origin: 1, moveType: 'arm', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/Gaiden/Lukas%20-%20Picnic/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Brave Celica', origin: 1,moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Gaiden/Celica%20-%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Brave Celica', origin: 1,moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: ["Galeforce"], img: '/Gaiden/Celica%20-%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Sonya', origin: 1, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [5], skills: [], img: '/Gaiden/Sonya/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Fallen Celica', origin: 1, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Gaiden/Celica%20-%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Luthier', origin: 1, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [3,4], skills: [], img: '/Gaiden/Luthier/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -462,7 +477,7 @@ const characters = [
     {name: 'Cecilia', origin: 5, moveType: 'cav', weapon: 'tome', color: 'green', rarity: [3,4], skills: [], img: '/Binding/Cecilia/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Bridal Juno', origin: 5, moveType: 'fly', weapon: 'tome', color: 'blue', rarity: [4,5], skills: [], img: '/Binding/Juno/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Brunnya', origin: 5, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [4,5], skills: [], img: '/Binding/Brunnya/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Brave Roy', origin: 5, moveType: 'cav', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Binding/Roy%20-%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Brave Roy', origin: 5, moveType: 'cav', weapon: 'sword', color: 'red', rarity: [5], skills: ["Galeforce"], img: '/Binding/Roy%20-%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Idunn', origin: 5, moveType: 'arm', weapon: 'dragon', color: 'red', rarity: [5], skills: [], img: '/Binding/Idunn/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Halloween Sophia', origin: 5, moveType: 'fly', weapon: 'tome', color: 'blue', rarity: [4,5], skills: [], img: '/Binding/Sophia%20-%20Halloween/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Groom Zelot', origin: 5, moveType: 'cav', weapon: 'axe', color: 'green', rarity: [4,5], skills: [], img: '/Binding/Zelot/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -553,7 +568,7 @@ const characters = [
     {name: 'Fargus', origin: 6, moveType: 'inf', weapon: 'axe', color: 'green', rarity: [3,4], skills: [], img: '/Blazing/Fargus/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Mythic Bramimond', origin: 6, moveType: 'inf', weapon: 'tome', color: 'colorless', rarity: [5], skills: [], img: '/Blazing/Bramimond%20-%20Mythic/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Winter Jaffar', origin: 6, moveType: 'arm', weapon: 'dagger', color: 'green', rarity: [4,5], skills: [], img: '/Blazing/Jaffar%20-%20Christmas/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Lyn', origin: 6, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Blazing/Lyn/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Lyn', origin: 6, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: ["Galeforce"], img: '/Blazing/Lyn/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Young Eliwood', origin: 6,moveType: 'cav', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Blazing/Eliwood%20-%20Young/Face_FC.png', duo: false, harmonic: false, dancer: false},
 
     // 7 - FE The Sacred Stones
@@ -712,7 +727,7 @@ const characters = [
     {name: 'New Years Lethe', origin: 9, moveType: 'cav', weapon: 'beast', color: 'green', rarity: [5], skills: [], img: '/RD/Lethe%20-%20New%20Years/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Micaiah', origin: 9, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/RD/Micaiah/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Ninja Zelgius', origin: 9, moveType: 'arm', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/RD/Zelgius%20-%20Ninja/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Pirate Tibarn', origin: 9, moveType: 'fly', weapon: 'beast', color: 'colorless', rarity: [5], skills: [], img: '/RD/Tibarn%20-%20Pirate/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Pirate Tibarn', origin: 9, moveType: 'fly', weapon: 'beast', color: 'colorless', rarity: [5], skills: ["Galeforce"], img: '/RD/Tibarn%20-%20Pirate/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Flame Tribe Mordecai', origin: 9, moveType: 'inf', weapon: 'beast', color: 'green', rarity: [4,5], skills: [], img: '/RD/Mordecai%20-%20Fire%20Tribe/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Bridal Nailah', origin: 9, moveType: 'inf', weapon: 'beast', color: 'green', rarity: [5], skills: [], img: '/RD/Nailah%20-%20Wedding/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Summer Micaiah', origin: 9, moveType: 'cav', weapon: 'tome', color: 'colorless', rarity: [5], skills: [], img: '/RD/Micaiah%20-%20Summer/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -764,9 +779,9 @@ const characters = [
     {name: 'Gaius', origin: 10, moveType: 'inf', weapon: 'dagger', color: 'colorless', rarity: [3,4], skills: [], img: '/Awakening/Gaius/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Spring Inigo', origin: 10, moveType: 'fly', weapon: 'bow', color: 'green', rarity: [5], skills: [], img: '/Awakening/Inigo%20-%20Spring/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Winter Robin', origin: 10, moveType: 'arm', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/Awakening/Robin%20-%20M%20Christmas/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Winter Cordelia', origin: 10,moveType: 'fly', weapon: 'lance', color: 'blue', rarity: [5], skills: [...marcos.asclash4], img: '/Awakening/Cordelia%20-%20Christmas%20Duo/Face_FC.png', duo: false, harmonic: true, dancer: false},
-    {name: 'Yarne', origin: 10, moveType: 'cav', weapon: 'beast', color: 'green', rarity: [5], skills: [], img: '/Awakening/Yarne/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'New Years Yarne', origin: 10, moveType: 'cav', weapon: 'beast', color: 'blue', rarity: [4,5], skills: [], img: '/Awakening/Yarne%20-%20New%20Years/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Winter Cordelia', origin: 10,moveType: 'fly', weapon: 'lance', color: 'blue', rarity: [5], skills: [...marcos.asclash4, "Galeforce"], img: '/Awakening/Cordelia%20-%20Christmas%20Duo/Face_FC.png', duo: false, harmonic: true, dancer: false},
+    {name: 'Yarne', origin: 10, moveType: 'cav', weapon: 'beast', color: 'green', rarity: [5], skills: ["Galeforce"], img: '/Awakening/Yarne/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'New Years Yarne', origin: 10, moveType: 'cav', weapon: 'beast', color: 'blue', rarity: [4,5], skills: ["Galeforce"], img: '/Awakening/Yarne%20-%20New%20Years/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Sully', origin: 10, moveType: 'cav', weapon: 'lance', color: 'blue', rarity: [3,4], skills: [], img: '/Awakening/Sully/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Dancer Inigo', origin: 10, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [5], skills: [], img: '/Awakening/Inigo%20-%20Dancer/Face_FC.png', duo: false, harmonic: false, dancer: true},
     {name: "Yen'fay", origin: 10, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [3,4], skills: [], img: '/Awakening/Yen%27fay/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -814,7 +829,7 @@ const characters = [
     {name: 'Brave Robin(M)', origin: 10, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: [], img: '/Awakening/Robin%20-%20M%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Gangrel', origin: 10, moveType: 'inf', weapon: 'dagger', color: 'colorless', rarity: [3,4], skills: [], img: '/Awakening/Gangrel/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Olivia', origin: 10,moveType: 'inf', weapon: 'sword', color: 'red', rarity: [3,4], skills: [], img: '/Awakening/Olivia/Face_FC.png', duo: false, harmonic: false, dancer: true},
-    {name: 'Fallen Rearmed Chrom', origin: 10,moveType: 'cav', weapon: 'sword', color: 'red', rarity: [5], skills: [...marcos.asclash4], img: '/Awakening/Chrom%20-%20Rearmed%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Fallen Rearmed Chrom', origin: 10,moveType: 'cav', weapon: 'sword', color: 'red', rarity: [5], skills: [...marcos.asclash4, "Galeforce"], img: '/Awakening/Chrom%20-%20Rearmed%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Nowi', origin: 10, moveType: 'inf', weapon: 'dragon', color: 'dragon', rarity: [3,4], skills: [], img: '/Awakening/Nowi/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Lucina/Marth', origin: 10,moveType: 'inf', weapon: 'sword', color: 'red', rarity: [4,5], skills: [], img: '/Awakening/Lucina%20-%20Marth/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Halloween Robin(F)', origin: 10, moveType: 'fly', weapon: 'dragon', color: 'green', rarity: [5], skills: [], img: '/Awakening/Robin%20-%20F%20Halloween/Face_FC.png', duo: false, harmonic: false, dancer: false},
@@ -831,7 +846,7 @@ const characters = [
     {name: 'Fallen Robin(M)', origin: 10, moveType: 'arm', weapon: 'dragon', color: 'green', rarity: [5], skills: [], img: '/Awakening/Robin%20-%20M%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Legendary Chrom', origin: 10, moveType: 'inf', weapon: 'bow', color: 'blue', rarity: [5], skills: [], img: '/Awakening/Chrom%20-%20Legendary/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Cynthia', origin: 10, moveType: 'fly', weapon: 'lance', color: 'blue', rarity: [3,4], skills: [], img: '/Awakening/Cynthia/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'Cordelia', origin: 10, moveType: 'fly', weapon: 'lance', color: 'blue', rarity: [3,4], skills: [], img: '/Awakening/Cordelia/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Cordelia', origin: 10, moveType: 'fly', weapon: 'lance', color: 'blue', rarity: [3,4], skills: ["Galeforce"], img: '/Awakening/Cordelia/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Halloween Robin(M)', origin: 10, moveType: 'arm', weapon: 'dragon', color: 'colorless', rarity: [5], skills: [], img: '/Awakening/Robin%20-%20M%20Halloween/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Spring Severa', origin: 10, moveType: 'cav', weapon: 'tome', color: 'red', rarity: [5], skills: [], img: '/Awakening/Severa%20-%20Spring/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Halloween Kellam', origin: 10, moveType: 'arm', weapon: 'sword', color: 'red', rarity: [4,5], skills: [], img: '/Awakening/Kellam%20-%20Halloween/Face_FC.png', duo: false, harmonic: false, dancer: false},

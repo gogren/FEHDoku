@@ -19,6 +19,8 @@ interface Constraint {
     title: string;
     func: (character: Character) => boolean
 }
+
+// I doubt doing it like this is conventional but oh well
 const day = new Date().getDate();
 
 
@@ -40,5 +42,8 @@ else if (day === 15) {
 }
 else if (day === 16) {
     columnTitles = [constraints.dagger, constraints.axe, constraints.staff]
+}
+else if (day === 17) {
+    columnTitles = [constraints.galeforce, constraints.thracia, constraints.duo]
 }
 export default columnTitles

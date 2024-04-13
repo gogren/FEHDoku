@@ -1,8 +1,36 @@
 import funcList from "./constraintFuncs";
 
+interface Character {
+    name: string;
+    origin: number;
+    moveType: string;
+    weapon: string;
+    color: string;
+    rarity: number[];
+    skills: string[];
+    img: string;
+    dancer: boolean;
+    duo: boolean
+    harmonic: boolean;
+}
+
+interface Constraint {
+    id: string;
+    title: string;
+    func: (character: Character) => boolean
+}
+
+interface Constraints {
+    [key: string]: {
+        id: string;
+        title: string;
+        func: (character: Character) => boolean;
+    };
+}
+
 
 // key: {id: "", title: "", func: funcList},
-const constraints = {
+const constraints: Constraints = {
     // Origin
    shadow_dragon: {id: "", title: "FE: Shadow Dragon", func: funcList.shadow_dragon}, 
    three_houses: {id: "", title: "FE: Three Houses/Hopes", func: funcList.three_houses},
@@ -46,6 +74,7 @@ const constraints = {
     //Skills
     aspush: {id: "", title: "Has Atk/Spd Push 4", func: funcList.aspush},
     asclash3: {id: "", title: "Has Atk/Spd Clash 3", func: funcList.asclash3},
+    galeforce: {id: "", title: "Has Galeforce", func: funcList.galeforce},
 
    // Misc
    dancer: {id: "", title: "Dancer", func: funcList.dancer},
@@ -58,8 +87,8 @@ const constraints = {
    green_tome: {id: "", title: "Green Tome Unit", func: funcList.green_tome},
 };
 
-for (let i = 0; i < constraints.length; i++) {
-    constraints[i].id = i;
+for (const key of Object.keys(constraints)) {
+    constraints[key].id = key;
 }
 
 export default constraints; 

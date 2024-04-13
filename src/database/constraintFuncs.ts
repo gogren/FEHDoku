@@ -265,6 +265,14 @@ function asclash3(character: Character) {
     }
     return false;
 }
+function galeforce(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "Galeforce") {
+            return true;
+        }
+    }
+    return false;
+}
 
 // Misc
 function dancer(character:Character) {
@@ -338,6 +346,7 @@ const funcList = {
     three_star: is_three_star,
 
     //Skills
+    galeforce: galeforce,
     glimmer: has_glimmer,
     aspush: aspush,
     asclash3: asclash3,
