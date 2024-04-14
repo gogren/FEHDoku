@@ -46,7 +46,7 @@ const fc = 'Face_FC.png';
 const characters: Character[] = [
     // Heroes
     {name: "Alfonse", origin: 15, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [4], skills: ["Folkvangr", ...marcos.baseSwords, ...marcos.sol, ...marcos.deathblow3, ...marcos.spuratk3], img: "Heroes/Alfonse/Face_FC.png", duo: false, harmonic: false, dancer: false},
-    {name: "New Years Alfonse", origin: 15, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [4,5], skills: [], img: "Heroes/Alfonse%20-%20New%20Years%20Duo/" + fc, duo: true, harmonic: false, dancer: false},
+    {name: "New Years Alfonse", origin: 15, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [4,5], skills: [], img: "Heroes/Alfonse%20-%20New%20Years%20Duo/" + fc, duo: true, harmonic: false, dancer: false},
     {name: "Spring Alfonse", origin: 15, moveType: 'cav', weapon: 'axe', color: 'green', rarity: [4], skills: [], img: "Heroes/Alfonse%20-%20Spring/" + fc, duo: false, harmonic: false, dancer: false},
     {name: "Valentines Alfonse", origin: 15, moveType: 'arm', weapon: 'tome', color: 'green', rarity: [4,5], skills: [], img: "Heroes/Alfonse%20-%20Valentines/" + fc, duo: false, harmonic: false, dancer: false},
     {name: "Anna", origin: 15, moveType: 'inf', weapon: 'axe', color: 'green', rarity: [4], skills: [], img: "Heroes/Anna/" + fc, duo: false, harmonic: false, dancer: false},
