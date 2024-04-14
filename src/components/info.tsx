@@ -30,6 +30,9 @@ const InfoModal: React.FC<InfoModalProps> = ({ isVisible, onClose, children }) =
                                 <p className='pb-2'>
                                     Note: This site is in early development, please feel free to let me know of any errors you come across.
                                 </p>
+                                <p className="pb-2">
+                                    Message me at <a className="text-blue-500 hover:underline" href="https://www.reddit.com/user/Gogren/">u/Gogren</a>
+                                </p>
                                 <hr className="" />
                                 <div className="pb-2 bg-gray-200 px-2 rounded-md">
                                     <h2 className="text-center text-2xl pt-2">How to Play</h2>
