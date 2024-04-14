@@ -25,47 +25,47 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
       if (i === 0 && j === 0) {
           // Could useState to store square id, then on close set useState to ""
           row.push(
-            <Square i={i} j={j} square={s1} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+            <Square key={`square_${i}_${j}`} i={i} j={j} square={s1} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
           );
       }
       else if (i === 0 && j === 1) {
         row.push(
-          <Square i={i} j={j} square={s2} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s2} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 0 && j === 2) {
         row.push(
-          <Square i={i} j={j} square={s3} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s3} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
       else if (i === 1 && j === 0) {
         row.push(
-          <Square i={i} j={j} square={s4} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s4} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 1 && j === 1) {
         row.push(
-          <Square i={i} j={j} square={s5} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s5} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 1 && j === 2) {
         row.push(
-          <Square i={i} j={j} square={s6} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s6} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 2 && j === 0) {
         row.push(
-          <Square i={i} j={j} square={s7} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s7} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
       else if (i === 2 && j === 1) {
         row.push(
-          <Square i={i} j={j} square={s8} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s8} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         );
       }
       else if (i === 2 && j === 2) {
         row.push(
-          <Square i={i} j={j} square={s9} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s9} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
         ); 
       }
     }
@@ -84,13 +84,13 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
   }
 
   // Generate column titles
-  const columnTitleElements = columnTitles.map((constraint) => (
-    <div key={constraint.id} className="column-title text-[0.875rem] flex justify-center items-center text-center">
+  const columnTitleElements = columnTitles.map((constraint, index) => (
+    <div key={index} className="column-title text-[0.875rem] flex justify-center items-center text-center">
       {constraint.title}
     </div>
   ));
 
-  columnTitleElements.unshift(<div className='empty-col-div'></div>)
+  columnTitleElements.unshift(<div key={'empty-col-div'} className='empty-col-div'></div>)
 
   return (
     <div className="grid-container pt-12">
