@@ -87,4 +87,4 @@ const constraints: Constraints = {
    green_tome: {id: "green_tome", title: "Green Tome Unit", func: funcList.green_tome},
 };
 
-export default constraints; 
+export default constraints;

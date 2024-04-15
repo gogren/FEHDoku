@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import SquareGrid from '../components/SquareGrid';
 import CharacterListModal from '../components/characterlistmodal';
 import get_characters from './getcharacters';
@@ -8,6 +8,7 @@ import rowTitles from '@/todaysrules/rowTitles';
 import EndgameModal from '@/components/endgameModal';
 import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/header';
+import SolGrid from '@/components/SolGrid';
 
 interface Character {
   name: string;
@@ -33,7 +34,8 @@ export default function Home() {
   const [isGameOver, setGameOver] = useState(false);
   const [didWin, setDidWin] = useState(false);
   const [score, setScore] = useState(0);
-  const [showResutls, setShowResults] = useState(false)
+  const [showResutls, setShowResults] = useState(false);
+  const [showExSol, setExSol] = useState(false);
 
   //Gonna need a useState for each square [name, img path]
   const [sqaure1contents, setSquare1Contents] = useState<string[]>(["",""])
@@ -159,13 +161,41 @@ export default function Home() {
     }
   }
 
+  function smoothScrollTo(targetPosition: number, duration: number) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const startTime = performance.now();
+  
+    function scrollAnimation(currentTime: number) {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      const easing = (progress: number) => progress * (2 - progress);
+  
+      window.scrollTo(0, startPosition + distance * easing(progress));
+  
+      if (elapsedTime < duration) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+  
+    requestAnimationFrame(scrollAnimation);
+  }
+  
+  // Inside your component
+  useEffect(() => {
+    if (showExSol) {
+      // Scroll down smoothly over 1000 milliseconds (adjust duration as needed)
+      smoothScrollTo(600, 1000);
+    }
+  }, [showExSol]);
+
   return (
-    <main className="h-screen w-full bg-slate-800 flex flex-col items-center overflow-x-scroll justify-center">
+    <main className={`w-full bg-slate-800 flex flex-col items-center justify-center ${!showExSol ? 'h-screen' : ''}`}>
       {/* Header */}
       <Header></Header>
 
       {/* Main section */}
-      <div className="w-11/12 h-full bg-slate-200 rounded-tl-3xl rounded-tr-3xl">
+      <div className="w-11/12 h-full bg-slate-200 rounded-tl-3xl rounded-tr-3xl pt-16">
         
         <div className="w-full pb-20"></div>
         <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} s4={sqaure4contents} s5={sqaure5contents} s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} setSquareID={setSquareID} setCharSearchMode={openSquare}/>
@@ -174,7 +204,7 @@ export default function Home() {
         
         <div className="text-slate-800 flex-col text-center pt-4 font-bold">Guesses Left: {guesses}</div>
         
-        <EndgameModal isVisible = {isGameOver} onClose={() => setGameOver(false)} didWin={didWin} score = {score}/>
+        <EndgameModal isVisible = {isGameOver} onClose={() => {setGameOver(false); setExSol(true)}} didWin={didWin} score = {score}/>
         
         {showResutls && 
           <>
@@ -182,7 +212,7 @@ export default function Home() {
             <div className="text-black text-center pt2 text-xl">Score: {score}/9</div>
           </>
         }
-
+        <SolGrid isVisible = {showExSol}/>
         <Analytics/>
       </div>
     </main>

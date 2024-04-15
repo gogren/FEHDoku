@@ -1,6 +1,6 @@
 import marcos from "./marcos"
 
-interface Character {
+export interface Character {
     name: string;
     origin: number;
     moveType: string;
@@ -1017,6 +1017,11 @@ const characters: Character[] = [
     {name: 'Shiro', origin: 11,moveType: 'inf', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/Fates/Shiro/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Benny', origin: 11, moveType: 'arm', weapon: 'lance', color: 'blue', rarity: [3,4], skills: [], img: '/Fates/Benny/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Nyx', origin: 11, moveType: 'inf', weapon: 'tome', color: 'red', rarity: [5], skills: [], img: '/Fates/Nyx/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'Attuned Azura', origin: 11, moveType: 'cav', weapon: 'axe', color: 'green', rarity: [5], skills: [], img: '/Fates/AAzura/Face_FC.webp', duo: false, harmonic: false, dancer: true},
+    {name: 'Hayato', origin: 11, moveType: 'inf', weapon: 'tome', color: 'red', rarity: [4,5], skills: [], img: '/Fates/Hayato/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Mozu', origin: 11, moveType: 'inf', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/Fates/Mozu/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Yukimura', origin: 11, moveType: 'cav', weapon: 'dagger', color: 'colorless', rarity: [5], skills: [], img: '/Fates/Yukimura/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Candace', origin: 11, moveType: 'inf', weapon: 'bow', color: 'colorless', rarity: [4,5], skills: [], img: '/Fates/Candace/Face_FC.webp', duo: false, harmonic: false, dancer: false},
 
     // 12 - FE Three Houses / Hopes
     {name: 'Spring Linhardt', origin: 12, moveType: 'inf', weapon: 'bow', color: 'colorless', rarity: [4,5], skills: [], img: '/ThreeHouses/SLinhardt/Face_FC.webp', duo: false, harmonic: false, dancer: false},
