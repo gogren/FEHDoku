@@ -31,7 +31,7 @@ const Header = () => {
                     <div className='w-1/3 h-full flex flex-row items-center text-center'>
                         <div className="w-1/2 h-full flex justify-center items-center">
                             <button className="coffeebutton sm:p-1 md:p-3 border border-white rounded-full font-medium text-white text-sm hover:border-yellow-400 hover:text-yellow-400 hover:transform hover:-translate-y-1 transition duration-200">
-                                <a href="https://www.buymeacoffee.com/trentjkelly">Buy me a coffee!</a>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/trentjkelly">Buy me a coffee!</a>
                             </button>
                         </div>
                         <div className="w-1/2 h-full flex flex-col justify-center items-center info">

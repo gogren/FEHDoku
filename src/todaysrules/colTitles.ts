@@ -46,4 +46,10 @@ else if (day === 16) {
 else if (day === 17) {
     columnTitles = [constraints.galeforce, constraints.thracia, constraints.duo]
 }
+else if (day == 18) {
+    columnTitles = [constraints.heroes, constraints.asideal3, constraints.dancer]
+}
+else if (day == 19) {
+    columnTitles = [constraints.shadow_dragon, constraints.harmonic, constraints.tpulse3]
+}
 export default columnTitles

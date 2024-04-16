@@ -273,6 +273,22 @@ function galeforce(character: Character) {
     }
     return false;
 }
+function asideal3(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "Atk/Spd Ideal 3") {
+            return true;
+        }
+    }
+    return false;
+}
+function tpulse3(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "Times Pulse 3") {
+            return true;
+        }
+    }
+    return false;
+}
 
 // Misc
 function dancer(character:Character) {
@@ -350,6 +366,8 @@ const funcList = {
     glimmer: has_glimmer,
     aspush: aspush,
     asclash3: asclash3,
+    asideal3: asideal3,
+    tpulse3: tpulse3,
     // Misc
     duo: duo,
     harmonic: harmonic,

@@ -34,7 +34,7 @@ const constraints: Constraints = {
     // Origin
    shadow_dragon: {id: "shadow_dragon", title: "FE: Shadow Dragon", func: funcList.shadow_dragon}, 
    three_houses: {id: "three_houses", title: "FE: Three Houses/Hopes", func: funcList.three_houses},
-   heores: {id: "heores", title: "FE: Heroes", func: funcList.heroes},
+   heroes: {id: "heroes", title: "FE: Heroes", func: funcList.heroes},
    gaiden: {id: "gaiden", title: "FE: Gaiden (Echoes)", func: funcList.gaiden},
    genealogy: {id: "genealogy", title: "FE: Genealogy of the Holy War", func: funcList.genealogy},
    thracia: {id: "thracia", title: "FE: Thracia 776", func: funcList.thracia},
@@ -59,7 +59,7 @@ const constraints: Constraints = {
    axe: {id: "axe", title: 'Axe User', func: funcList.axe},
    dagger: {id: "dagger", title: "Dagger User", func: funcList.dagger},
    lance: {id: "lance", title: "Lance User", func: funcList.lance},
-   bow_user: {id: "bow_user", title: "Bow User", func: funcList.bow},
+   bow: {id: "bow_user", title: "Bow User", func: funcList.bow},
    sword: {id: "sword", title: "Sword User", func: funcList.sword},
    dragon: {id: "dragon", title: "Dragon/Breath Unit", func: funcList.dragon},
    tome: {id: "tome", title: "Tome User", func: funcList.tome},
@@ -75,6 +75,8 @@ const constraints: Constraints = {
     aspush: {id: "aspush", title: "Has Atk/Spd Push 4", func: funcList.aspush},
     asclash3: {id: "asclash3", title: "Has Atk/Spd Clash 3", func: funcList.asclash3},
     galeforce: {id: "galeforce", title: "Has Galeforce", func: funcList.galeforce},
+    asideal3: {id: "asideal3", title: "Has Atk/Spd Ideal 3", func: funcList.asideal3},
+    tpulse3: {id: "tpulse3", title: "Has Time's Pulse 3", func: funcList.tpulse3},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer},
@@ -87,4 +89,4 @@ const constraints: Constraints = {
    green_tome: {id: "green_tome", title: "Green Tome Unit", func: funcList.green_tome},
 };
 
-export default constraints;
+export default constraints; 
