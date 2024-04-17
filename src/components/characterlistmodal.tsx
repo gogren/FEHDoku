@@ -37,7 +37,7 @@ const CharacterListModal: React.FC<InfoModalProps> = ({ isVisible, onClose, chil
                             {charList.map((character) => {
                             const isUsed = usedChars.includes(character.name);
                             return (
-                                <button onClick={() => {handleChosenCharacter(character);}} className={`flex justify-between border border-black rounded-md shadow-md hover:bg-gray-300 ${isUsed ? 'text-gray-500 line-through' : ''}`}>
+                                <button key={character.name} onClick={() => {handleChosenCharacter(character);}} className={`flex justify-between border border-black rounded-md shadow-md hover:bg-gray-300 ${isUsed ? 'text-gray-500 line-through' : ''}`}>
                                 <img src={"/images/" + character.img} className="border border-black rounded-md shadow-md w-12 h-auto" />
                                 <div className="p-1">
                                     {character.name}

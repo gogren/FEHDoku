@@ -132,9 +132,6 @@ export default function Home() {
   }
   
   function openSquare(k: number, j: number) {
-    console.log("Used Squares:", usedSquares)
-    console.log("Curr Square", currSquare)
-    console.log("Vals", k, j);
     if (guesses > 0) {
       for (let i = 0; i < usedSquares.length; i ++) {
         if (usedSquares[i][0] === k && usedSquares[i][1] === j) {
@@ -144,7 +141,6 @@ export default function Home() {
       }
       setCharSearchMode(true); 
       generate_ten_chars("");
-      console.log("Set search mode to true");
     }
   }
 
@@ -182,9 +178,9 @@ export default function Home() {
       <Header></Header>
 
       {/* Main section */}
-      <div className="w-11/12 h-full bg-slate-200 rounded-tl-3xl rounded-tr-3xl pt-16">
+      <div className="w-11/12 h-full bg-slate-200 rounded-tl-3xl rounded-tr-3xl pt-14">
         
-        <div className="w-full pb-20"></div>
+        <div className="w-full pb-14"></div>
         <SquareGrid s1={sqaure1contents} s2={sqaure2contents} s3={sqaure3contents} s4={sqaure4contents} s5={sqaure5contents} s6={sqaure6contents} s7={sqaure7contents} s8={sqaure8contents} s9={sqaure9contents} setSquareID={setSquareID} setCharSearchMode={openSquare}/>
         
         <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter} inputText={inputText} charList={charList} usedChars={usedChars}/>
