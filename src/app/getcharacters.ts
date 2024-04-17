@@ -22,7 +22,7 @@ function get_characters(text: string) {
 
     const query = text.toLowerCase();
     for (let i = 0; i < characters.length; i ++) {
-        if (ten_chars.length >= 11) {
+        if (ten_chars.length >= 14) {
             return ten_chars;
         }
         if (compare_names(query, characters[i].name.toLowerCase())) {
