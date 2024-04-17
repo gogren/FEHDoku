@@ -42,7 +42,7 @@ else if (day === 16) {
     rowTitles = [constraints.awakening, constraints.infantry, constraints.armor]
 }
 else if (day === 17) {
-    rowTitles = [constraints.cav, constraints.blue, constraints.fly]
+    rowTitles = [constraints.cav, constraints.blue, constraints.flying]
 }
 else if (day == 18) {
     rowTitles = [constraints.colorless, constraints.tome, constraints.sword]
