@@ -1,18 +1,5 @@
 import React from "react";
-
-interface Character {
-    name: string;
-    origin: number;
-    moveType: string;
-    weapon: string;
-    color: string;
-    rarity: number[];
-    skills: string[];
-    img: string;
-    dancer: boolean;
-    duo: boolean;
-    harmonic: boolean;
-  }
+import { Character } from "@/database/characters";
 
 interface InfoModalProps {
     isVisible: boolean;

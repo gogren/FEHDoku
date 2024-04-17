@@ -1,24 +1,5 @@
-import constraints from '../database/constraints'
+import constraints, { Constraint } from '../database/constraints'
 
-interface Character {
-    name: string;
-    origin: number;
-    moveType: string;
-    weapon: string;
-    color: string;
-    rarity: number[];
-    skills: string[];
-    img: string;
-    duo: boolean
-    harmonic: boolean
-    dancer: boolean;
-}
-
-interface Constraint {
-    id: string;
-    title: string;
-    func: (character: Character) => boolean
-}
 
 // I doubt doing it like this is conventional but oh well
 const day = new Date().getDate();

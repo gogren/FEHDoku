@@ -1,20 +1,4 @@
-import characters from '../database/characters'
-
-
-// Should really make this an import but oh well
-interface Character {
-    name: string;
-    origin: number;
-    moveType: string;
-    weapon: string;
-    color: string;
-    rarity: number[];
-    skills: string[];
-    img: string;
-    duo: boolean;
-    harmonic: boolean;
-    dancer: boolean;
-}
+import characters, { Character } from '../database/characters'
 
 // Just checks if query is in the name as a whole, not if they're entirely equal
 function compare_names(query: string, name: string) {

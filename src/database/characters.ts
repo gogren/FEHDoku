@@ -108,7 +108,7 @@ const characters: Character[] = [
     {name: 'Valentines Lif', origin: 15, moveType: 'cav', weapon: 'tome', color: 'red', rarity: [5], skills: [], img: '/Heroes/L%C3%ADf%20-%20Valentines%20Duo/Face_FC.png', duo: true, harmonic: false, dancer: false},
     {name: 'Brave Veronica', origin: 15, moveType: 'cav', weapon: 'staff', color: 'colorless', rarity: [5], skills: [], img: '/Heroes/Veronica%20-%20CYL/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'New Years Kvasir', origin: 15, moveType: 'inf', weapon: 'tome', color: 'green', rarity: [5], skills: [], img: '/Heroes/Kvasir%20-%20New%20Years/Face_FC.png', duo: false, harmonic: false, dancer: false},
-    {name: 'New Years Seidr', origin: 15, moveType: 'fly', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/Heroes/Sei%C3%B0r%20-%20New%20Years/Face_FC.png', duo: false, harmonic: false, dancer: false},
+    {name: 'New Years Seidr', origin: 15, moveType: 'fly', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/Heroes/Sei%C3%B0r%20-%20New%20Years/Face_FC.png', duo: true, harmonic: false, dancer: false},
     {name: 'Lif', origin: 15, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: ["Times Pulse 3"], img: '/Heroes/L%C3%ADf/Face_FC.png', duo: false, harmonic: false, dancer: false},
     {name: 'Winter Mirabilis', origin: 15, moveType: 'fly', weapon: 'dagger', color: 'blue', rarity: [5], skills: [], img: '/Heroes/Mirabilis%20-%20Christmas/Face_FC.png', duo: false, harmonic: false, dancer: true},
     {name: 'Summer Ymir', origin: 15, moveType: 'inf', weapon: 'tome', color: 'colorless', rarity: [5], skills: [], img: '/Heroes/Ymir%20-%20Summer%20Duo/Face_FC.png', duo: true, harmonic: false, dancer: false},

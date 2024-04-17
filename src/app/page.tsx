@@ -9,20 +9,7 @@ import EndgameModal from '@/components/endgameModal';
 import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/header';
 import SolGrid from '@/components/SolGrid';
-
-interface Character {
-  name: string;
-  origin: number;
-  moveType: string;
-  weapon: string;
-  color: string;
-  rarity: number[];
-  skills: string[];
-  img: string;
-  dancer: boolean;
-  duo: boolean;
-  harmonic: boolean;
-}
+import { Character } from '@/database/characters';
 
 export default function Home() {
   // If you set setCharSearchMode, could also set another state to hold the id of the square clicked on

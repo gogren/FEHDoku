@@ -1,16 +1,5 @@
-interface Character {
-    name: string;
-    origin: number;
-    moveType: string;
-    weapon: string;
-    color: string;
-    rarity: number[];
-    skills: string[];
-    img: string;
-    dancer: boolean;
-    duo: boolean
-    harmonic: boolean;
-}
+import { Character } from "./characters";
+
 // Origins
 
 /* Games: 

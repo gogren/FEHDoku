@@ -1,6 +1,6 @@
 import columnTitles from "@/todaysrules/colTitles";
 import rowTitles from "@/todaysrules/rowTitles";
-import characters, {Character} from "@/database/characters";
+import characters, { Character } from "@/database/characters";
 
 
 // Get a list of characters that fit for each square, randomly chose one for now. 
