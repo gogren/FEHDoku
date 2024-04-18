@@ -135,7 +135,6 @@ export default function Home() {
     if (guesses > 0) {
       for (let i = 0; i < usedSquares.length; i ++) {
         if (usedSquares[i][0] === k && usedSquares[i][1] === j) {
-          console.log(usedSquares, currSquare);
           return
         }
       }
