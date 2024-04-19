@@ -106,7 +106,9 @@ body {
   font-size: x-small;
   height: auto;
 }
-
+.squaretitle {
+  padding-bottom: 3px;
+}
 @media (max-width: 520px) {
   .title {
     font-size: x-large;
@@ -133,6 +135,13 @@ body {
   .square, .trsquare, .tlsquare, .blsquare, .brsquare {
     width: 75px;
     height: 75px;
+  }
+  .squaretitle {
+    line-height: 10px;
+  }
+  .frequency {
+    line-height: 8px;
+    font-size: xx-small;
   }
 
   .column-titles {
@@ -188,6 +197,9 @@ body {
   }
   .char-img {
     width: 28px;
+  }
+  .frequency {
+    font-size: 7px;
   }
   .char-text {
     font-size: 7px;

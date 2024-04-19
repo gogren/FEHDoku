@@ -15,8 +15,39 @@ interface SquareGridProps {
   s7: string[];
   s8: string[];
   s9: string[];
+  cont1: number;
+  cont2: number;
+  cont3: number;
+  cont4: number;
+  cont5: number;
+  cont6: number;
+  cont7: number;
+  cont8: number;
+  cont9: number;
+  cht1: number;
+  cht2: number;
+  cht3: number;
+  cht4: number;
+  cht5: number;
+  cht6: number;
+  cht7: number;
+  cht8: number;
+  cht9: number;
 }
-function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7, s8, s9}: SquareGridProps) {
+
+function divideAndRound(num1: number, num2: number): string {
+  if (num2 === -1 || num2 === 0 || num1 === -1) {
+      return "";
+  }
+
+  const result = num1 / num2;
+  const roundedResult = Math.round(result * 1000) / 10; // Round to the nearest tenth
+  return `${roundedResult}%`;
+}
+
+// Oh god
+function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7, s8, s9, cont1, cont2, cont3, cont4, cont5, cont6,
+cont7, cont8, cont9, cht1, cht2, cht3, cht4, cht5, cht6, cht7, cht8, cht9}: SquareGridProps) {
   // Generate a 3x3 grid
   const grid = [];
   for (let i = 0; i < 3; i++) {
@@ -24,48 +55,57 @@ function SquareGrid({setCharSearchMode, setSquareID, s1, s2, s3, s4, s5, s6, s7,
     for (let j = 0; j < 3; j++) {
       if (i === 0 && j === 0) {
           // Could useState to store square id, then on close set useState to ""
+          const freq = divideAndRound(cht1, cont1);
           row.push(
-            <Square key={`square_${i}_${j}`} i={i} j={j} square={s1} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+            <Square key={`square_${i}_${j}`} i={i} j={j} square={s1} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq} ></Square>
           );
       }
       else if (i === 0 && j === 1) {
+        const freq = divideAndRound(cht2, cont2);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s2} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s2} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         );
       }
       else if (i === 0 && j === 2) {
+        const freq = divideAndRound(cht3, cont3);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s3} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s3} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         ); 
       }
       else if (i === 1 && j === 0) {
+        const freq = divideAndRound(cht4, cont4);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s4} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s4} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         );
       }
       else if (i === 1 && j === 1) {
+        const freq = divideAndRound(cht5, cont5);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s5} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s5} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         );
       }
       else if (i === 1 && j === 2) {
+        const freq = divideAndRound(cht6, cont6);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s6} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s6} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         );
       }
       else if (i === 2 && j === 0) {
+        const freq = divideAndRound(cht7, cont7);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s7} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s7} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         ); 
       }
       else if (i === 2 && j === 1) {
+        const freq = divideAndRound(cht8, cont8);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s8} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s8} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         );
       }
       else if (i === 2 && j === 2) {
+        const freq = divideAndRound(cht9, cont9);
         row.push(
-          <Square key={`square_${i}_${j}`} i={i} j={j} square={s9} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} ></Square>
+          <Square key={`square_${i}_${j}`} i={i} j={j} square={s9} setCharSearchMode={setCharSearchMode} setSquareID={setSquareID} freq={freq}></Square>
         ); 
       }
     }

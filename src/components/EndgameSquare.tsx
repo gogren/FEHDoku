@@ -2,9 +2,10 @@ type SquareProps = {
     i: number;
     j: number;
     square: string[];
+    freq: string;
 };
 
-const EndGameSquare: React.FC<SquareProps> = ({ i, j, square}) => {
+const EndGameSquare: React.FC<SquareProps> = ({ i, j, square, freq}) => {
 
     // Conditionals for rounding corners
     let roundedCorner : string = "square";
@@ -22,14 +23,17 @@ const EndGameSquare: React.FC<SquareProps> = ({ i, j, square}) => {
     // Actual component
     return (
         <button onClick={() => {}} className={`${roundedCorner}`}>
-            <div className={`flex flex-col items-center hover:scale-110 transition-transform duration-300`}>
-                {square[1] !== "" ? (
-                    <>
-                        <img src={`../images/${square[1]}`} alt="" className='h-auto pb-1 rounded-md char-img'/>
-                        {/* <div className="text-white text-xs text-center char-text">{"Frequency: 69%"}</div> */}
-                    </>
-                ) : null}
-                <div className="text-black text-xs text-center char-text">{square[0]}</div>
+            <div className={`flex flex-col items-center`}>
+                <div className="hover:scale-110 transition-transform duration-300 flex flex-col items-center">
+                    {square[1] !== "" ? (
+                        <>
+                            <img src={`../images/${square[1]}`} alt="" className='h-auto rounded-md char-img'/>
+                            {/* <div className="text-white text-xs text-center char-text">{"Frequency: 69%"}</div> */}
+                        </>
+                    ) : null}
+                    <div className="squaretitle text-black text-xs text-center char-text leading-tight">{square[0]}</div>
+                </div>
+                <div className="frequency text-xs bg-slate-400 rounded-lg px-1">{freq}</div>
             </div>
         </button>
     );
