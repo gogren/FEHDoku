@@ -155,8 +155,8 @@ const characters: Character[] = [
     
     
     // Shadow Dragon / Mystery
-    {name: 'Castor', origin: 13, moveType: 'inf', weapon: 'bow', color: 'red', rarity: [3,4], skills: [], img: '/ShadowDragon/Castor/Face_FC.webp', duo: false, harmonic: false, dancer: false},
-    {name: 'Yuliya', origin: 13, moveType: 'inf', weapon: 'staff', color: 'colorless', rarity: [5], skills: [], img: '/ShadowDragon/Yuliya/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Castor', origin: 0, moveType: 'inf', weapon: 'bow', color: 'red', rarity: [3,4], skills: [], img: '/ShadowDragon/Castor/Face_FC.webp', duo: false, harmonic: false, dancer: false},
+    {name: 'Yuliya', origin: 0, moveType: 'inf', weapon: 'staff', color: 'colorless', rarity: [5], skills: [], img: '/ShadowDragon/Yuliya/Face_FC.webp', duo: false, harmonic: false, dancer: false},
     {name: 'Ascended Merric', origin: 0, moveType: 'cav', weapon: 'tome', color: 'green', rarity: [5], skills: [], img: '/ShadowDragon/AMerric/Face_FC.webp', duo: false, harmonic: false, dancer: false},
     {name: 'Attuned Caeda', origin: 0, moveType: 'inf', weapon: 'lance', color: 'blue', rarity: [5], skills: [], img: '/ShadowDragon/ACaeda/Face_FC.webp', duo: false, harmonic: false, dancer: false},
     {name: 'Arlen', origin: 0, moveType: 'inf', weapon: 'tome', color: 'colorless', rarity: [5], skills: [], img: '/ShadowDragon/Arlen/Face_FC.webp', duo: false, harmonic: false, dancer: false},
