@@ -139,59 +139,67 @@ export default function Home() {
 
   // Get all relevent contraint totals at loadup and store them in a useState
   const getConstraintTotal = async (i: number, j: number, inc: boolean) => {
-    let totals: number
-        const conID = generateConstraintId(rowTitles[i], columnTitles[j]);
-        const collectionRef = collection(db, 'constraints');
-        const querySnapshot = await getDocs(query(collectionRef, where('title', '==', conID)));
-        if (!querySnapshot.empty) {
-          const chars: number[] = [];
-          querySnapshot.forEach(async (doc) => {
-            console.log("Found constraint duo", doc.data().title);
-            chars.push(doc.data().total);
-            // Increment constraint total after getting current total
-            if (inc) {
-              console.log('Incremented')
-              await updateDoc(doc.ref, {
-                total: increment(1),
-              })
-            }
+    let highestTotal = 0;
+    const conID = generateConstraintId(rowTitles[i], columnTitles[j]);
+    const collectionRef = collection(db, 'constraints');
+    const querySnapshot = await getDocs(query(collectionRef, where('title', '==', conID)));
+    
+    if (!querySnapshot.empty) {
+      querySnapshot.forEach(async (doc) => {
+        const total = doc.data().total;
+        console.log("Found constraint duo", doc.data().title);
+        if (total > highestTotal) {
+          highestTotal = total;
+        }
+        // Increment constraint total after getting current total
+        if (inc) {
+          console.log('Incremented');
+          await updateDoc(doc.ref, {
+            total: increment(1),
           });
-          totals = chars[0];
         }
-        else {
-          console.log("Didn't find constraint Duo");
-          await addConstraint(conID);
-          totals = 1
-        }
-      console.log("TOTALS",totals)
-      if (i === 0 && j === 0) {
-        setConstrantTotal1(totals)
-      }
-      else if (i === 0 && j === 1) {
-        setConstrantTotal2(totals)
-      }
-      else if (i === 0 && j === 2) {
-        setConstrantTotal3(totals)
-      }
-      else if (i === 1 && j === 0) {
-        setConstrantTotal4(totals)
-      }
-      else if (i === 1 && j === 1) {
-        setConstrantTotal5(totals)
-      }
-      else if (i === 1 && j === 2) {
-        setConstrantTotal6(totals)
-      }
-      else if (i === 2 && j === 0) {
-        setConstrantTotal7(totals)
-      }
-      else if (i === 2 && j === 1) {
-        setConstrantTotal8(totals)
-      }
-      else if (i === 2 && j === 2) {
-        setConstrantTotal9(totals)
-      }
-  }
+      });
+    } else {
+      console.log("Didn't find constraint Duo");
+      await addConstraint(conID);
+      highestTotal = 1;
+    }
+    
+    console.log("Highest Total", highestTotal);
+    
+    // Set the state based on the position (i, j)
+    switch (`${i},${j}`) {
+      case '0,0':
+        setConstrantTotal1(highestTotal);
+        break;
+      case '0,1':
+        setConstrantTotal2(highestTotal);
+        break;
+      case '0,2':
+        setConstrantTotal3(highestTotal);
+        break;
+      case '1,0':
+        setConstrantTotal4(highestTotal);
+        break;
+      case '1,1':
+        setConstrantTotal5(highestTotal);
+        break;
+      case '1,2':
+        setConstrantTotal6(highestTotal);
+        break;
+      case '2,0':
+        setConstrantTotal7(highestTotal);
+        break;
+      case '2,1':
+        setConstrantTotal8(highestTotal);
+        break;
+      case '2,2':
+        setConstrantTotal9(highestTotal);
+        break;
+      default:
+        break;
+    }
+  };
   
 const getCharacterTotal = async (char: Character, i: number, j: number) => {
   const conID = generateConstraintId(rowTitles[i], columnTitles[j]);
