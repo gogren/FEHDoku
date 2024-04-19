@@ -31,4 +31,13 @@ else if (day == 18) {
 else if (day == 19) {
     rowTitles = [constraints.bow, constraints.red_tome, constraints.blue]
 }
+else if (day == 20) {
+    rowTitles = [constraints.colorless, constraints.tome, constraints.flying]
+}
+else if (day == 21) {
+    rowTitles = [constraints.duo, constraints.green_tome, constraints.staff]
+}
+else if (day == 22) {
+    rowTitles = [constraints.nfu3, constraints.colorless, constraints.green]
+}
 export default rowTitles

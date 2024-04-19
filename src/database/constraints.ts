@@ -66,6 +66,8 @@ const constraints: Constraints = {
     galeforce: {id: "galeforce", title: "Has Galeforce", func: funcList.galeforce, warning: ""},
     asideal3: {id: "asideal3", title: "Has Atk/Spd Ideal 3", func: funcList.asideal3, warning: ""},
     tpulse3: {id: "tpulse3", title: "Has Time's Pulse 3", func: funcList.tpulse3, warning: ""},
+    guard3: {id: "guard3", title: "Has Guard 3", func: funcList.guard3, warning: ""},
+    nfu3: {id: "nfu3", title: "Has Null Follow-Up 3", func: funcList.nfu3, warning: ""},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},

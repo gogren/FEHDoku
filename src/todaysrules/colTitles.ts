@@ -33,4 +33,13 @@ else if (day == 18) {
 else if (day == 19) {
     columnTitles = [constraints.shadow_dragon, constraints.harmonic, constraints.tpulse3]
 }
+else if (day == 20) {
+    columnTitles = [constraints.guard3, constraints.dancer, constraints.gaiden]
+}
+else if (day == 21) {
+    columnTitles = [constraints.armor, constraints.aspush, constraints.sacred]
+}
+else if (day == 22) {
+    columnTitles = [constraints.tpulse3, constraints.three_houses, constraints.dagger]
+}
 export default columnTitles
