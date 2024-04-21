@@ -15,6 +15,7 @@ import { collection, addDoc, getDocs, query, where, updateDoc, increment, doc, g
 import { db } from './firebase'; 
 import generateConstraintId from './generateConstraintId';
 import NoticeModal from '@/components/notice';
+import CorrectCharactersModal from '@/components/CorrectCharactersModal';
 
 export default function Home() {
   // If you set setCharSearchMode, could also set another state to hold the id of the square clicked on
@@ -29,6 +30,7 @@ export default function Home() {
   const [score, setScore] = useState(0);
   const [showResutls, setShowResults] = useState(false);
   const [showExSol, setExSol] = useState(false);
+  const [showCorrectCharacters, setCorrectCharacters] = useState(false);
 
   //Gonna need a useState for each square [name, img path]
   const [sqaure1contents, setSquare1Contents] = useState<string[]>(["",""])
@@ -507,7 +509,9 @@ const getMostUsedCount = async () => {
           </>
         }
         <SolGrid isVisible = {showExSol} chars={mostUsed} charTotals={mostUsedCounts} cont1={constraintTotal1} cont2={constraintTotal2} cont3={constraintTotal3}
-        cont4={constraintTotal4} cont5={constraintTotal5} cont6={constraintTotal6} cont7={constraintTotal7} cont8={constraintTotal8} cont9={constraintTotal9}/>
+        cont4={constraintTotal4} cont5={constraintTotal5} cont6={constraintTotal6} cont7={constraintTotal7} cont8={constraintTotal8} cont9={constraintTotal9}
+        openSquare={() => setCorrectCharacters(true)} setSquareID = {setSquareID}/>
+        <CorrectCharactersModal isVisible = {showCorrectCharacters} onClose={() => setCorrectCharacters(false)} currSquare = {currSquare}/>
         <Analytics/>
       </div>
     </main>

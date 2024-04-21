@@ -5,6 +5,8 @@ import { Character } from "@/database/characters";
 
 
 interface SolGridProps {
+    setSquareID: (id: number[]) => void;
+    openSquare: () => void;
     isVisible: boolean;
     chars: Character[];
     charTotals: number[];
@@ -28,7 +30,7 @@ function divideAndRound(num1: number, num2: number): string {
     return `${roundedResult}%`;
   }
 
-const SolGrid = ({isVisible, chars, charTotals, cont1, cont2, cont3, cont4, cont5, cont6, cont7, cont8, cont9}: SolGridProps) => {
+const SolGrid = ({isVisible, chars, charTotals, cont1, cont2, cont3, cont4, cont5, cont6, cont7, cont8, cont9, openSquare, setSquareID}: SolGridProps) => {
     if (!isVisible) {
         return null;
     }
@@ -49,63 +51,63 @@ const SolGrid = ({isVisible, chars, charTotals, cont1, cont2, cont3, cont4, cont
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[0], cont1);} else {freq = ''}
             row.push(
-                <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[0].name, solChars[0].img]} freq={freq}/>
+                <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[0].name, solChars[0].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 0 && j === 1) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[1], cont2);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[1].name, solChars[1].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[1].name, solChars[1].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 0 && j === 2) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[2], cont3);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[2].name, solChars[2].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[2].name, solChars[2].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             ); 
         }
         else if (i === 1 && j === 0) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[3], cont4);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[3].name, solChars[3].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[3].name, solChars[3].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 1 && j === 1) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[4], cont5);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[4].name, solChars[4].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[4].name, solChars[4].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 1 && j === 2) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[5], cont6);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[5].name, solChars[5].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[5].name, solChars[5].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 2 && j === 0) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[6], cont7);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[6].name, solChars[6].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[6].name, solChars[6].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             ); 
         }
         else if (i === 2 && j === 1) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[7], cont8);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[7].name, solChars[7].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[7].name, solChars[7].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             );
         }
         else if (i === 2 && j === 2) {
             let freq: string;
             if (!solutionMode) {freq = divideAndRound(charTotals[8], cont9);} else {freq = ''}
             row.push(
-            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[8].name, solChars[8].img]} freq={freq}/>
+            <EndGameSquare key={`square_${i}_${j}`} i={i} j={j} square={[solChars[8].name, solChars[8].img]} freq={freq} openSquare={openSquare} setSquareID={setSquareID}/>
             ); 
         }
         }

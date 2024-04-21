@@ -3,9 +3,11 @@ type SquareProps = {
     j: number;
     square: string[];
     freq: string;
+    openSquare: () => void;
+    setSquareID: (id: number[]) => void;
 };
 
-const EndGameSquare: React.FC<SquareProps> = ({ i, j, square, freq}) => {
+const EndGameSquare: React.FC<SquareProps> = ({ i, j, square, freq, openSquare, setSquareID}) => {
 
     // Conditionals for rounding corners
     let roundedCorner : string = "square";
@@ -22,7 +24,7 @@ const EndGameSquare: React.FC<SquareProps> = ({ i, j, square, freq}) => {
 
     // Actual component
     return (
-        <button onClick={() => {}} className={`${roundedCorner}`}>
+        <button onClick={() => {openSquare(); setSquareID([i, j])}} className={`${roundedCorner}`}>
             <div className={`flex flex-col items-center`}>
                 <div className="hover:scale-110 transition-transform duration-300 flex flex-col items-center">
                     {square[1] !== "" ? (
