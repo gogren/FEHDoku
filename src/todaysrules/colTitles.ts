@@ -42,4 +42,7 @@ else if (day == 21) {
 else if (day == 22) {
     columnTitles = [constraints.tpulse3, constraints.three_houses, constraints.dagger]
 }
+else if (day == 23) {
+    columnTitles = [constraints.bow, constraints.srfartrace3, constraints.awakening]
+}
 export default columnTitles

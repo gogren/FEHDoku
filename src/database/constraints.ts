@@ -68,6 +68,7 @@ const constraints: Constraints = {
     tpulse3: {id: "tpulse3", title: "Has Time's Pulse 3", func: funcList.tpulse3, warning: ""},
     guard3: {id: "guard3", title: "Has Guard 3", func: funcList.guard3, warning: ""},
     nfu3: {id: "nfu3", title: "Has Null Follow-Up 3", func: funcList.nfu3, warning: ""},
+    srfartrace3: {id: "srfartrace3", title: "Has S/R Far Trace 3", func: funcList.srfartrace3, warning: ""},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},

@@ -294,7 +294,14 @@ function nfu3(character: Character) {
     }
     return false;
 }
-
+function srfartrace3(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "srfartrace3") {
+            return true;
+        }
+    }
+    return false;
+}
 // Misc
 function dancer(character:Character) {
     return character.dancer
@@ -375,6 +382,7 @@ const funcList = {
     tpulse3: tpulse3,
     guard3: guard3,
     nfu3: nfu3,
+    srfartrace3: srfartrace3,
     // Misc
     duo: duo,
     harmonic: harmonic,

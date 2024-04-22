@@ -16,6 +16,7 @@ import { db } from './firebase';
 import generateConstraintId from './generateConstraintId';
 import NoticeModal from '@/components/notice';
 import CorrectCharactersModal from '@/components/CorrectCharactersModal';
+import getFinalScore from './getScore';
 
 export default function Home() {
   // If you set setCharSearchMode, could also set another state to hold the id of the square clicked on
@@ -340,7 +341,6 @@ const getMostUsedCount = async () => {
   useEffect(() => {
     // Check if this is the first run of the effect
     if (isFirstRun.current) {
-      console.log("This prints once on initial mount");
       getMostUsedCharacters();
       getMostUsedCount();
       for (let i = 0; i < 3; i++) {
@@ -371,7 +371,6 @@ const getMostUsedCount = async () => {
     if (columnTitles[y].func(character) && rowTitles[x].func(character)){
       const constraintTotal = getConstraintTotal(x,y, true);
       const charTotal = getCharacterTotal(character, x, y);
-      console.log(charTotal, 'over', constraintTotal);
       if (x === 0 && y === 0) {
         setSquare1Contents([character.name, character.img])
       }
@@ -423,8 +422,6 @@ const getMostUsedCount = async () => {
   }
 
   function testScore(curScore: number) {
-    console.log("Search Mode:", charSearchMode);
-    console.log("Score",curScore)
     if (curScore === 9) {
       setDidWin(true);
     }
@@ -500,12 +497,21 @@ const getMostUsedCount = async () => {
         
         <div className="text-slate-800 flex-col text-center pt-4 font-bold">Guesses Left: {guesses}</div>
         
-        <EndgameModal isVisible = {isGameOver} onClose={() => {setGameOver(false); setExSol(true)}} didWin={didWin} score = {score}/>
+        <EndgameModal isVisible = {isGameOver} onClose={() => {setGameOver(false); setExSol(true)}} didWin={didWin} score = {getFinalScore([characterTotal1, characterTotal2, characterTotal3, characterTotal4, characterTotal5, characterTotal6,
+            characterTotal7, characterTotal8, characterTotal9], 
+            [constraintTotal1, constraintTotal2, constraintTotal3,
+              constraintTotal4, constraintTotal5, constraintTotal6, constraintTotal7, constraintTotal8, constraintTotal9]
+            )}/>
         
         {showResutls && 
           <>
             <div className="text-black text-center pt-4 text-3xl">Game Over</div>
-            <div className="text-black text-center pt2 text-xl">Score: {score}/9</div>
+            {/*<div className="text-black text-center pt2 text-xl">{score}/9 Guessed Correctly</div>*/}
+            <div className="text-black text-center pt2 text-xl">Final Score: {getFinalScore([characterTotal1, characterTotal2, characterTotal3, characterTotal4, characterTotal5, characterTotal6,
+            characterTotal7, characterTotal8, characterTotal9], 
+            [constraintTotal1, constraintTotal2, constraintTotal3,
+              constraintTotal4, constraintTotal5, constraintTotal6, constraintTotal7, constraintTotal8, constraintTotal9]
+            )}/900</div>
           </>
         }
         <SolGrid isVisible = {showExSol} chars={mostUsed} charTotals={mostUsedCounts} cont1={constraintTotal1} cont2={constraintTotal2} cont3={constraintTotal3}
