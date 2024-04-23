@@ -45,4 +45,7 @@ else if (day == 22) {
 else if (day == 23) {
     columnTitles = [constraints.bow, constraints.srfartrace3, constraints.awakening]
 }
+else if (day == 24) {
+    columnTitles = [constraints.wrath3, constraints.genealogy, constraints.armor]
+}
 export default columnTitles

@@ -43,4 +43,7 @@ else if (day == 22) {
 else if (day == 23) {
     rowTitles = [constraints.duo, constraints.dancer, constraints.harmonic]
 }
+else if (day == 24) {
+    rowTitles = [constraints.blue, constraints.dragon, constraints.green]
+}
 export default rowTitles

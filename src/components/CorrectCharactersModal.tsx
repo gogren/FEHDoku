@@ -1,4 +1,5 @@
 import characters, {Character} from "@/database/characters";
+import { Constraint } from "@/database/constraints";
 import rowTitles from "@/todaysrules/rowTitles";
 import columnTitles from "@/todaysrules/colTitles";
 
@@ -15,9 +16,19 @@ function getCharacters(x: number, y: number) {
             chars.push(characters[i])
         }
     }
+    if (chars.length === 0) {
+        console.log("none")
+        return [{name: "None", origin: -1, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: "", duo: false, harmonic: false, dancer: false}]
+    }
     return chars;
 }
-
+function getTitleStrings(currSquare: number[]) {
+    if (currSquare.length !== 0) {
+      return columnTitles[currSquare[1]].title + " & " + rowTitles[currSquare[0]].title;
+    } else {
+      return "Title Not Found"; // or any other default value or error handling mechanism
+    }
+  }
 
 const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
     if (!isVisible) {
@@ -41,7 +52,8 @@ const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
         <div id="wrapper" onClick={handleClose} className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
             <div className="w-[470px]">
                 <div className="bg-white p-2 rounded-md shadow-md flex flex-col">
-                    <p className="text-center text-xl pb-2 pt-2">Correct Characters</p>
+                    <p className="text-center text-2xl pb-2 pt-2">Correct Characters</p>
+                    <p className="text-center text-xl pb-2">{getTitleStrings(currSquare)}</p>
                     <hr className="pb-2"/>
                     <div className="pb-2 max-h-[400px] overflow-y-auto">
                     {chars.map((character) => {
@@ -55,7 +67,7 @@ const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
                         )
                     })}
                     </div>
-                    <button onClick={()=> onClose()} className="text-white bg-red-700 rounded-md shadow-md px-3 py-1 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300 place-self-center">Done</button>
+                    <button onClick={()=> onClose()} className="text-white bg-red-700 rounded-md shadow-md px-3 py-1 hover:bg-red-900 hover:transform hover:-translate-y-1 transition duration-300 place-self-center">Done</button>                    
                 </div>
             </div>
         </div>

@@ -121,7 +121,7 @@ export default function Home() {
         await updateDoc(characterDocRef, { count: updatedCount });
   
         console.log("Incremented count for", charName, "to", updatedCount);
-        return currentCount;
+        return updatedCount;
       }
     }
   
@@ -333,7 +333,12 @@ const getMostUsedCount = async () => {
   // Idk man converts promise to number array
   const out: number[] = []
   for (let i = 0; i < counts.length; i++) {
-    out.push(await counts[i]);
+    if (await counts[i] === 0) {
+      out.push(0)
+    }
+    else{
+      out.push(await counts[i] + 1);
+    }
   }
   setMostUsedCounts(out);
 }
