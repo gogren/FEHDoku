@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "FehDoku",
-  description: "Daily Fire Emblem Heroes Sudoku-type puzzle",
+  description: "Daily Fire Emblem Heroes Sudoku-type Puzzle",
 };
 
 export default function RootLayout({

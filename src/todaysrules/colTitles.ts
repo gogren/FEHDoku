@@ -2,6 +2,16 @@ import constraints, { Constraint } from '../database/constraints'
 
 
 // I doubt doing it like this is conventional but oh well
+// Could npm install moment-timezone
+
+// import moment from 'moment-timezone';
+
+// const timeZone = 'America/Chicago'; // CT time zone
+// const currentDate = moment().tz(timeZone);
+
+// const day = currentDate.date(); // Get the day of the month
+// const month = currentDate.month() + 1; // Month is zero-indexed, so add 1
+// const year = currentDate.year();
 const day = new Date().getDate();
 
 
@@ -46,6 +56,9 @@ else if (day == 23) {
     columnTitles = [constraints.bow, constraints.srfartrace3, constraints.awakening]
 }
 else if (day == 24) {
-    columnTitles = [constraints.wrath3, constraints.genealogy, constraints.armor]
+    columnTitles = [constraints.wrath3, constraints.binding, constraints.armor]
 }
+else if (day == 25){
+    columnTitles = [constraints.resplendent, constraints.genealogy, constraints.path_of_radiance]
+}   
 export default columnTitles

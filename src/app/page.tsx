@@ -1,6 +1,6 @@
 'use client';
 import {useState, useEffect, useRef } from 'react';
-import characters from '@/database/characters';
+import characters, { Character } from '@/database/characters';
 import SquareGrid from '../components/SquareGrid';
 import CharacterListModal from '../components/characterlistmodal';
 import get_characters from './getcharacters';
@@ -10,7 +10,6 @@ import EndgameModal from '@/components/endgameModal';
 import { Analytics } from '@vercel/analytics/react';
 import Header from '@/components/header';
 import SolGrid from '@/components/SolGrid';
-import { Character } from '@/database/characters';
 import { collection, addDoc, getDocs, query, where, updateDoc, increment, doc, getDoc } from "firebase/firestore";
 import { db } from './firebase'; 
 import generateConstraintId from './generateConstraintId';
@@ -278,7 +277,7 @@ const getMostUsedCharacters = async () => {
   const chars = []
   for (let i = 0; i < charNames.length; i++) {
     if (await charNames[i] === null) {
-      chars.push({name: 'None yet for this constraint!', origin: 20, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: '', duo: false, harmonic: false, dancer: false})
+      chars.push({name: 'None yet for this constraint!', origin: 20, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: '', duo: false, harmonic: false, dancer: false, resplendent: false})
     }
     else {
       for (let j = 0; j < characters.length; j++) {

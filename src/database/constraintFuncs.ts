@@ -20,7 +20,7 @@ import { Character } from "./characters";
 14 - Tokyo Mirage Sessions
 15 - FE Heroes
 */
-function shadow_dragon(character:Character) {
+function shadow_dragon(character: Character) {
     if (character.origin === 0) {
         return true;
     }
@@ -319,6 +319,9 @@ function harmonic(character:Character) {
 function duo(character:Character) {
     return character.duo;
 }
+function resplendent(character:Character) {
+    return character.resplendent;
+}
 
 // Weapon color combos
 function red_tome(character: Character) {
@@ -395,6 +398,7 @@ const funcList = {
     duo: duo,
     harmonic: harmonic,
     dancer: dancer,
+    resplendent: resplendent,
 
     // Weapon Color combos:
     red_tome: red_tome,

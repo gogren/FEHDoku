@@ -1,4 +1,4 @@
-import characters, {Character} from "@/database/characters";
+import characters, { Character } from "@/database/characters";
 import { Constraint } from "@/database/constraints";
 import rowTitles from "@/todaysrules/rowTitles";
 import columnTitles from "@/todaysrules/colTitles";
@@ -18,7 +18,7 @@ function getCharacters(x: number, y: number) {
     }
     if (chars.length === 0) {
         console.log("none")
-        return [{name: "None", origin: -1, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: "", duo: false, harmonic: false, dancer: false}]
+        return [{name: "None", origin: -1, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: "", duo: false, harmonic: false, dancer: false, resplendent: false}]
     }
     return chars;
 }

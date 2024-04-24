@@ -22,7 +22,7 @@ function getExampleSolution(): Character[] {
                 out.push(curSquare[randomIndex]);
             }
             else {
-                out.push({name: 'ERROR', origin: 20, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: '', duo: false, harmonic: false, dancer: false})
+                out.push({name: 'ERROR', origin: 20, moveType: '', weapon: '', color: '', rarity: [], skills: [], img: '', duo: false, harmonic: false, dancer: false, resplendent: false})
                 console.error("This shit shouldn't happen");
             }
         }

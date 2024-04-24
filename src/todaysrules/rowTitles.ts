@@ -2,7 +2,7 @@ import constraints, { Constraint } from '../database/constraints'
 
 const day = new Date().getDate();
 
-let rowTitles:Constraint[] = [constraints.flying, constraints.duo, constraints.three_houses]
+let rowTitles: Constraint[] = [constraints.flying, constraints.duo, constraints.three_houses]
 
 if (day === 11) {
     rowTitles = [constraints.flying, constraints.duo, constraints.three_houses]
@@ -45,5 +45,8 @@ else if (day == 23) {
 }
 else if (day == 24) {
     rowTitles = [constraints.blue, constraints.dragon, constraints.green]
+}
+else if (day == 25) {
+    rowTitles = [constraints.staff, constraints.flying, constraints.armor]
 }
 export default rowTitles

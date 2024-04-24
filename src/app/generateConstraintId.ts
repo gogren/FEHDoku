@@ -1,22 +1,4 @@
-interface Character {
-    name: string;
-    origin: number;
-    moveType: string;
-    weapon: string;
-    color: string;
-    rarity: number[];
-    skills: string[];
-    img: string;
-    duo: boolean;
-    harmonic: boolean;
-    dancer: boolean;
-}
-
-interface Constraint {
-    id: string;
-    title: string;
-    func: (character: Character) => boolean
-}
+import { Constraint } from "@/database/constraints";
 
 
 function generateConstraintId(c1: Constraint, c2: Constraint) {

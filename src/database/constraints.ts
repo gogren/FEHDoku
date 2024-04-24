@@ -27,7 +27,7 @@ const constraints: Constraints = {
    gaiden: {id: "gaiden", title: "FE: Gaiden (Echoes)", func: funcList.gaiden, warning: ""},
    genealogy: {id: "genealogy", title: "FE: Genealogy of the Holy War", func: funcList.genealogy, warning: ""},
    thracia: {id: "thracia", title: "FE: Thracia 776", func: funcList.thracia, warning: ""},
-   binding: {id: "binding", title: "FE :Binding Blade", func: funcList.binding_blades, warning: ""},
+   binding: {id: "binding", title: "FE: Binding Blade", func: funcList.binding_blades, warning: ""},
    blazing: {id: "blazing", title: "FE: Blazing Blade", func: funcList.blazing_blades, warning: ""},
    sacred: {id: "sacred", title: "FE: Sacred Stones", func: funcList.sacred_stones, warning: ""},
    path_of_radiance: {id: "path_of_radiance", title: "FE: Path of Radiance", func: funcList.path_of_radiance, warning: ""},
@@ -75,6 +75,7 @@ const constraints: Constraints = {
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},
    duo: {id: "duo", title: "Duo Hero", func: funcList.duo, warning: ""},
    harmonic: {id: "harmonic", title: "Harmonic Hero", func: funcList.harmonic, warning: ""},
+   resplendent: {id: "resplendent", title: "Resplendent Hero", func: funcList.resplendent, warning: ""},
 
    // Weapon color combo:
    red_tome: {id: "red_tome", title: "Red Tome Unit", func: funcList.red_tome, warning: ""},
