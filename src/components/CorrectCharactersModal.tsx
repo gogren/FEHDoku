@@ -1,5 +1,4 @@
 import characters, { Character } from "@/database/characters";
-import { Constraint } from "@/database/constraints";
 import rowTitles from "@/todaysrules/rowTitles";
 import columnTitles from "@/todaysrules/colTitles";
 
@@ -7,6 +6,7 @@ interface Props {
     isVisible: boolean;
     onClose: () => void;
     currSquare: number[];
+    guessNums: number[];
 }
 
 function getCharacters(x: number, y: number) {
@@ -30,7 +30,7 @@ function getTitleStrings(currSquare: number[]) {
     }
   }
 
-const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
+const CorrectCharactersModal = ({isVisible, onClose, currSquare, guessNums}: Props) => {
     if (!isVisible) {
         return null;
     }
@@ -40,10 +40,13 @@ const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
         if (target.id === 'wrapper') onClose();
     }
     let chars: Character[];
+    let total_index: number; 
     if (currSquare.length == 0) {
         chars = []
+        total_index = 0;
     }
     else {
+        total_index = currSquare[0] * 3 + currSquare[1];
         chars = getCharacters(currSquare[0], currSquare[1])
     }
 
@@ -54,8 +57,9 @@ const CorrectCharactersModal = ({isVisible, onClose, currSquare}: Props) => {
                 <div className="bg-white p-2 rounded-md shadow-md flex flex-col">
                     <p className="text-center text-2xl pb-2 pt-2">Correct Characters</p>
                     <p className="text-center text-xl pb-2">{getTitleStrings(currSquare)}</p>
+                    <p className="text-center text-lg pb-2">Total Correct Guesses: {guessNums[total_index]}</p>
                     <hr className="pb-2"/>
-                    <div className="pb-2 max-h-[400px] overflow-y-auto">
+                    <div className="max-h-[350px] overflow-y-auto mb-2 border border-b-4 rounded-b-lg">
                     {chars.map((character) => {
                         return (
                             <div key={character.name}  className={`flex justify-between border border-black rounded-md shadow-md`}>

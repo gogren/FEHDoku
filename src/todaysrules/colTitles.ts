@@ -61,4 +61,7 @@ else if (day == 24) {
 else if (day == 25){
     columnTitles = [constraints.resplendent, constraints.genealogy, constraints.path_of_radiance]
 }   
+else if (day == 26) {
+    columnTitles = [constraints.engage, constraints.duo, constraints.arpush4]
+}
 export default columnTitles

@@ -32,7 +32,7 @@ const CharacterListModal: React.FC<InfoModalProps> = ({ isVisible, onClose, chil
                             <div className="text-center text-black pb-2">{getTitleStrings()}</div>
                             <input placeholder="Search Character" type="text" value={inputText} onChange={e => {generate_ten_chars(e.target.value);}} className="text-black bg-gray-200 rounded-md shadow-md pl-3 pr-3 border border-black w-[300px]" />
                         </form>
-                        <div className="flex flex-col pt-3 max-h-[400px] overflow-y-auto pb-4">
+                        <div className="flex flex-col pt-3 max-h-[400px] overflow-y-auto border-b-4 rounded-b-lg mt-2 rounded-md">
                             {charList.length === 0 && <div className="self-center pt-6">No Characters Found</div>}
                             {charList.map((character) => {
                             const isUsed = usedChars.includes(character.name);

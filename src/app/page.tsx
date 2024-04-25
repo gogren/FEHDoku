@@ -521,7 +521,8 @@ const getMostUsedCount = async () => {
         <SolGrid isVisible = {showExSol} chars={mostUsed} charTotals={mostUsedCounts} cont1={constraintTotal1} cont2={constraintTotal2} cont3={constraintTotal3}
         cont4={constraintTotal4} cont5={constraintTotal5} cont6={constraintTotal6} cont7={constraintTotal7} cont8={constraintTotal8} cont9={constraintTotal9}
         openSquare={() => setCorrectCharacters(true)} setSquareID = {setSquareID}/>
-        <CorrectCharactersModal isVisible = {showCorrectCharacters} onClose={() => setCorrectCharacters(false)} currSquare = {currSquare}/>
+        <CorrectCharactersModal isVisible = {showCorrectCharacters} onClose={() => setCorrectCharacters(false)} currSquare = {currSquare}
+        guessNums={[constraintTotal1, constraintTotal2, constraintTotal3, constraintTotal4, constraintTotal5, constraintTotal6, constraintTotal7, constraintTotal8, constraintTotal9]}/>
         <Analytics/>
       </div>
     </main>

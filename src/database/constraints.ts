@@ -70,6 +70,7 @@ const constraints: Constraints = {
     nfu3: {id: "nfu3", title: "Has Null Follow-Up 3", func: funcList.nfu3, warning: ""},
     srfartrace3: {id: "srfartrace3", title: "Has S/R Far Trace 3", func: funcList.srfartrace3, warning: ""},
     wrath3: {id: "wrath3", title: "Has Wrath 3", func: funcList.wrath3, warning: ""},
+    arpush4: {id: "arpush4", title: "Has Atk/Res Push 4", func: funcList.arpush4, warning: ""},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},
