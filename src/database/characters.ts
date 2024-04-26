@@ -651,7 +651,6 @@ const characters: Character[] = [
     // 8 - FE Path of Radiance
 
     {name: 'Young Ike', origin: 8, moveType: 'inf', weapon: 'sword', color: 'red', rarity: [5], skills: ["ncd3","dc"], img: '/POR/Ike%20-%20Young%20Duo/Face_FC.png', duo: true, harmonic: false, dancer: false, resplendent: false},
-    {name: 'Summer Rhys', origin: 8, moveType: 'inf', weapon: 'staff', color: 'colorless', rarity: [4,5], skills: [], img: '/POR/Rhys%20-%20Summer/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Summer Mia', origin: 8, moveType: 'cav', weapon: 'dagger', color: 'colorless', rarity: [5], skills: [], img: '/POR/Mia%20-%20Summer%20Harmonic/Face_FC.png', duo: false, harmonic: true, dancer: false, resplendent: false},
     {name: 'Oscar', origin: 8, moveType: 'cav', weapon: 'lance', color: 'blue', rarity: [3,4], skills: [], img: '/POR/Oscar/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Valentines Soren', origin: 8, moveType: 'cav', weapon: 'tome', color: 'blue', rarity: [5], skills: [], img: '/POR/Soren%20-%20Valentines/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
@@ -701,7 +700,7 @@ const characters: Character[] = [
     {name: 'Hoshidan Summer Elincia', origin: 8, moveType: 'inf', weapon: 'dagger', color: 'green', rarity: [5], skills: [], img: '/POR/Elincia%20-%20Summer%20Festival/Face_FC.png', duo: false, harmonic: false, dancer: true, resplendent: false},
 
     // 9 - FE Radiant Dawn
-
+    {name: 'Summer Rhys', origin: 9, moveType: 'inf', weapon: 'staff', color: 'colorless', rarity: [4,5], skills: [], img: '/POR/Rhys%20-%20Summer/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Nabata Tormod', origin: 9, moveType: 'inf', weapon: 'tome', color: 'red', rarity: [4,5], skills: [], img: '/RD/NTormod/Face_FC.webp', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Nabata Altina', origin: 9, moveType: 'inf', weapon: 'axe', color: 'green', rarity: [5], skills: ["Times Pulse 3"], img: '/RD/NAltina/Face_FC.webp', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Leanne', origin: 9, moveType: 'fly', weapon: 'beast', color: 'colorless', rarity: [5], skills: [], img: '/RD/Leanne/Face_FC.png', duo: false, harmonic: false, dancer: true, resplendent: false},
