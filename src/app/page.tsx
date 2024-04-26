@@ -444,6 +444,17 @@ const getMostUsedCount = async () => {
     }
   }
   
+  function getWarnings() {
+    if (
+      columnTitles[currSquare[1]].warning ||
+      rowTitles[currSquare[0]].warning
+    ) {
+      return [columnTitles[currSquare[1]].warning, rowTitles[currSquare[0]].warning];
+    } else {
+      return [];
+    }
+  }
+
   function openSquare(k: number, j: number) {
     if (guesses > 0) {
       for (let i = 0; i < usedSquares.length; i ++) {
@@ -497,7 +508,7 @@ const getMostUsedCount = async () => {
         cont1 = {constraintTotal1} cont2 = {constraintTotal2} cont3 = {constraintTotal3} cont4 = {constraintTotal4} cont5 = {constraintTotal5} cont6 = {constraintTotal6} cont7 = {constraintTotal7} cont8 = {constraintTotal8} cont9 = {constraintTotal9}
         cht1 = {characterTotal1} cht2 = {characterTotal2} cht3 = {characterTotal3} cht4 = {characterTotal4} cht5 = {characterTotal5} cht6 = {characterTotal6} cht7 = {characterTotal7} cht8 = {characterTotal8} cht9={characterTotal9}/>
         
-        <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} generate_ten_chars={generate_ten_chars} getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter} inputText={inputText} charList={charList} usedChars={usedChars}/>
+        <CharacterListModal isVisible={charSearchMode} onClose={() => {setCharSearchMode(false); setInputText("");}} getWarnings = {getWarnings} generate_ten_chars={generate_ten_chars} getTitleStrings={() => getTitleStrings()} handleChosenCharacter={handleChosenCharacter} inputText={inputText} charList={charList} usedChars={usedChars}/>
         
         <div className="text-slate-800 flex-col text-center pt-4 font-bold">Guesses Left: {guesses}</div>
         

@@ -30,8 +30,8 @@ const constraints: Constraints = {
    binding: {id: "binding", title: "FE: Binding Blade", func: funcList.binding_blades, warning: ""},
    blazing: {id: "blazing", title: "FE: Blazing Blade", func: funcList.blazing_blades, warning: ""},
    sacred: {id: "sacred", title: "FE: Sacred Stones", func: funcList.sacred_stones, warning: ""},
-   path_of_radiance: {id: "path_of_radiance", title: "FE: Path of Radiance", func: funcList.path_of_radiance, warning: ""},
-   radiant_dawn: {id: "radiant_dawn", title: "FE: Radiant Dawn", func: funcList.radiant_dawn, warning: ""},
+   path_of_radiance: {id: "path_of_radiance", title: "FE: Path of Radiance", func: funcList.path_of_radiance, warning: "Character entry in FEH must be Path of Radiance"},
+   radiant_dawn: {id: "radiant_dawn", title: "FE: Radiant Dawn", func: funcList.radiant_dawn, warning: "Character entry in FEH must be Radiant Dawn"},
    awakening: {id: "awakening", title: "FE: Awakening", func: funcList.awakening, warning: ""},
    fates: {id: "fates", title: "FE: Fates", func: funcList.fates, warning: ""},
    engage: {id: "engage", title: "FE: Engage", func: funcList.engage, warning: ""},
@@ -63,7 +63,7 @@ const constraints: Constraints = {
     //Skills
     aspush: {id: "aspush", title: "Has Atk/Spd Push 4", func: funcList.aspush, warning: ""},
     asclash3: {id: "asclash3", title: "Has Atk/Spd Clash 3", func: funcList.asclash3, warning: ""},
-    galeforce: {id: "galeforce", title: "Has Galeforce", func: funcList.galeforce, warning: ""},
+    galeforce: {id: "galeforce", title: "Has Galeforce", func: funcList.galeforce, warning: "Skill must be in hero's base kit"},
     asideal3: {id: "asideal3", title: "Has Atk/Spd Ideal 3", func: funcList.asideal3, warning: ""},
     tpulse3: {id: "tpulse3", title: "Has Time's Pulse 3", func: funcList.tpulse3, warning: ""},
     guard3: {id: "guard3", title: "Has Guard 3", func: funcList.guard3, warning: ""},
@@ -71,11 +71,12 @@ const constraints: Constraints = {
     srfartrace3: {id: "srfartrace3", title: "Has S/R Far Trace 3", func: funcList.srfartrace3, warning: ""},
     wrath3: {id: "wrath3", title: "Has Wrath 3", func: funcList.wrath3, warning: ""},
     arpush4: {id: "arpush4", title: "Has Atk/Res Push 4", func: funcList.arpush4, warning: ""},
+    dc: {id: "dc", title: "Has Distant Counter A Skill", func: funcList.dc, warning: "Skill must be in hero's base kit"},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},
-   duo: {id: "duo", title: "Duo Hero", func: funcList.duo, warning: ""},
-   harmonic: {id: "harmonic", title: "Harmonic Hero", func: funcList.harmonic, warning: ""},
+   duo: {id: "duo", title: "Duo Hero", func: funcList.duo, warning: "Does not include harmonic heroes"},
+   harmonic: {id: "harmonic", title: "Harmonic Hero", func: funcList.harmonic, warning: "Does not include duo heroes"},
    resplendent: {id: "resplendent", title: "Resplendent Hero", func: funcList.resplendent, warning: ""},
 
    // Weapon color combo:

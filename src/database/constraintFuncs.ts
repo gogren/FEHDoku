@@ -317,6 +317,14 @@ function arpush4(character: Character) {
     }
     return false;
 }
+function dc(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "dc") {
+            return true;
+        }
+    }
+    return false;
+}
 // Misc
 function dancer(character:Character) {
     return character.dancer
@@ -403,6 +411,7 @@ const funcList = {
     srfartrace3: srfartrace3,
     wrath3: wrath3,
     arpush4: arpush4,
+    dc: dc,
     // Misc
     duo: duo,
     harmonic: harmonic,
