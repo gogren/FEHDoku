@@ -67,4 +67,7 @@ else if (day == 26) {
 else if (day == 27) {
     columnTitles = [constraints.dc, constraints.sacred, constraints.red]
 }
+else if (day == 28) {
+    columnTitles = [constraints.resplendent, constraints.harmonic, constraints.awakening]
+}
 export default columnTitles

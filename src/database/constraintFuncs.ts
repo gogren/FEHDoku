@@ -349,6 +349,9 @@ function green_tome(character: Character) {
 function blue_tome(character: Character) {
     return (blue(character) && tome(character));
 }
+function colorless_bow(character: Character) {
+    return (is_colorless(character) && has_bow(character))
+}
 
 // Color movement combos:
 
@@ -422,6 +425,7 @@ const funcList = {
     red_tome: red_tome,
     green_tome: green_tome,
     blue_tome: blue_tome,
+    colorless_bow: colorless_bow,
 
     // Color Movement combos:
 };

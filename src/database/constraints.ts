@@ -83,6 +83,7 @@ const constraints: Constraints = {
    red_tome: {id: "red_tome", title: "Red Tome Unit", func: funcList.red_tome, warning: ""},
    blue_tome: {id: "blue_tome", title: "Blue Tome Unit", func: funcList.blue_tome, warning: ""},
    green_tome: {id: "green_tome", title: "Green Tome Unit", func: funcList.green_tome, warning: ""},
+   colorless_bow: {id: "colorless_bow", title: "Colorless Bow Unit", func: funcList.colorless_bow, warning: ""},
 };
 
 export default constraints; 
