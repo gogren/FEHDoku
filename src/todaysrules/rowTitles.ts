@@ -58,4 +58,7 @@ else if (day == 27) {
 else if (day == 28) {
     rowTitles = [constraints.dagger, constraints.dragon, constraints.colorless_bow]
 }
+else if (day == 29) {
+    rowTitles = [constraints.infantry, constraints.colorless, constraints.sword]
+}
 export default rowTitles

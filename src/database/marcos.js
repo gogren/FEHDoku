@@ -13,7 +13,7 @@ const marcos = {
     asclash4: ['Atk/Spd Clash 3', 'Atk/Spd Clash 4'],
 
     // B Skills
-    lullspddef3: ['Lull Spd/Def 1', 'Lull Spd/Def 2', 'Lull Spd/Def 3'],
+    lullspddef3: ['Lull Spd/Def 1', 'Lull Spd/Def 2', 'lullsd3'],
 
     // C Skills
     defsmoke3: ['Def Smoke 3', 'Def Smoke 2', 'Def Smoke 1'],

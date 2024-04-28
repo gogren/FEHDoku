@@ -229,6 +229,14 @@ function is_five_star(character:Character) {
 }
 
 // Skills
+function lullsd3(character:Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "lullsd3") {
+            return true;
+        }
+    }
+    return false;
+}
 function has_glimmer(character:Character) {
     for (let i = 0; i < character.skills.length; i++) {
         if (character.skills[i] === "glimmer") {
@@ -415,6 +423,7 @@ const funcList = {
     wrath3: wrath3,
     arpush4: arpush4,
     dc: dc,
+    lullsd3: lullsd3,
     // Misc
     duo: duo,
     harmonic: harmonic,

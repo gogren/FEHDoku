@@ -19,7 +19,7 @@ import getFinalScore from './getScore';
 
 export default function Home() {
   // If you set setCharSearchMode, could also set another state to hold the id of the square clicked on
-  const [noticeMode, setNoticeMode] = useState(true);
+  const [noticeMode, setNoticeMode] = useState(false);
   const [charSearchMode, setCharSearchMode] = useState(false)
   const [inputText, setInputText] = useState("")
   const [charList, setCharList] = useState<Character[]>([])
@@ -120,7 +120,7 @@ export default function Home() {
         await updateDoc(characterDocRef, { count: updatedCount });
   
         console.log("Incremented count for", charName, "to", updatedCount);
-        return updatedCount;
+        return currentCount;
       }
     }
   
@@ -164,7 +164,7 @@ export default function Home() {
     } else {
       console.log("Didn't find constraint Duo");
       await addConstraint(conID);
-      highestTotal = 1;
+      highestTotal = 0;
     }
     
     console.log("Highest Total", highestTotal);

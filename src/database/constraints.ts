@@ -72,6 +72,7 @@ const constraints: Constraints = {
     wrath3: {id: "wrath3", title: "Has Wrath 3", func: funcList.wrath3, warning: ""},
     arpush4: {id: "arpush4", title: "Has Atk/Res Push 4", func: funcList.arpush4, warning: ""},
     dc: {id: "dc", title: "Has Distant Counter A Skill", func: funcList.dc, warning: "Skill must be in hero's base kit"},
+    lullsd3: {id: "lullsd3", title: "Has Lull Spd/Def 3", func: funcList.lullsd3, warning: "Skill must be in hero's base kit"},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},

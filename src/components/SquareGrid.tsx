@@ -36,10 +36,12 @@ interface SquareGridProps {
 }
 
 function divideAndRound(num1: number, num2: number): string {
-  if (num2 === -1 || num2 === 0 || num1 === -1) {
+  if (num2 === -1 || num1 === -1) {
       return "";
   }
-
+  if (num2 === 0) {
+    return "0%"
+  }
   const result = num1 / num2;
   const roundedResult = Math.round(result * 1000) / 10; // Round to the nearest tenth
   return `${roundedResult}%`;

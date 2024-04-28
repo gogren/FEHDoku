@@ -22,11 +22,22 @@ interface SolGridProps {
 }
 
 function divideAndRound(num1: number, num2: number): string {
-    if (num2 === -1 || num2 === 0 || num1 === -1) {
+    if (num2 === -1 || num1 === -1) {
         return "";
+    }
+    if (num2 === 0) {
+        return "0%"
     }
     const result = num1 / num2;
     const roundedResult = Math.round(result * 1000) / 10; // Round to the nearest tenth
+    if (roundedResult >= 100) {
+        if (num1  == 1 || num1 == num2) {
+            return "100%"
+        }
+        const result = (num1 - 1) / num2;
+        const roundedResult = Math.round(result * 1000) / 10;
+        return `${roundedResult}%`;
+    }
     return `${roundedResult}%`;
   }
 
