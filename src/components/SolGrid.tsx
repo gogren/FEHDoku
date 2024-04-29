@@ -2,6 +2,7 @@ import getExampleSolution from "@/app/getSolution";
 import React, { useState } from 'react';
 import EndGameSquare from "./EndgameSquare";
 import { Character } from "@/database/characters";
+import Link from "next/link";
 
 
 interface SolGridProps {
@@ -142,6 +143,11 @@ const SolGrid = ({isVisible, chars, charTotals, cont1, cont2, cont3, cont4, cont
                 <div className="empty-div" />
                 {grid}
             </div>
+            </div>
+            <div className="pt-10">
+                {/*
+                <Link href = "/makePuzzle" target="_blank" rel="noopener noreferrer" className="rounded-md bg-slate-500 p-2 text-white shadow-md">Create a Puzzle</Link>
+                */}
             </div>
         </div>
     );

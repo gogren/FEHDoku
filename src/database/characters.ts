@@ -752,7 +752,7 @@ const characters: Character[] = [
     {name: 'Groom Rafiel', origin: 9, moveType: 'inf', weapon: 'beast', color: 'blue', rarity: [4,5], skills: [], img: '/RD/Rafiel%20-%20Wedding/Face_FC.png', duo: false, harmonic: false, dancer: true, resplendent: false},
     {name: 'Nailah', origin: 9, moveType: 'inf', weapon: 'beast', color: 'blue', rarity: [5], skills: ["ncd3","dc"], img: '/RD/Nailah/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Pirate Vika', origin: 9, moveType: 'fly', weapon: 'beast', color: 'colorless', rarity: [4,5], skills: [], img: '/RD/Vika%20-%20Pirate/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
-    {name: 'Reyson', origin: 9, moveType: 'fly', weapon: 'beast', color: 'colorless', rarity: [3,4], skills: [], img: '/RD/Reyson/Face_FC.png', duo: false, harmonic: false, dancer: true, resplendent: false},
+    {name: 'Reyson', origin: 9, moveType: 'fly', weapon: 'beast', color: 'green', rarity: [3,4], skills: [], img: '/RD/Reyson/Face_FC.png', duo: false, harmonic: false, dancer: true, resplendent: false},
     {name: 'Oliver', origin: 9, moveType: 'inf', weapon: 'tome', color: 'blue', rarity: [3,4], skills: [], img: '/RD/Oliver/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
     {name: 'Fallen Muarim', origin: 9, moveType: 'inf', weapon: 'beast', color: 'blue', rarity: [3,4], skills: ["wrath3"], img: '/RD/Muarim%20-%20Fallen/Face_FC.png', duo: false, harmonic: false, dancer: false, resplendent: false},
 
