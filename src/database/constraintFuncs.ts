@@ -333,6 +333,14 @@ function dc(character: Character) {
     }
     return false;
 }
+function threatas2(character: Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "threatas2") {
+            return true;
+        }
+    }
+    return false;
+}
 // Misc
 function dancer(character:Character) {
     return character.dancer
@@ -424,6 +432,7 @@ const funcList = {
     arpush4: arpush4,
     dc: dc,
     lullsd3: lullsd3,
+    threatas2: threatas2,
     // Misc
     duo: duo,
     harmonic: harmonic,

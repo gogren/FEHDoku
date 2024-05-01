@@ -15,7 +15,7 @@ import constraints, { Constraint } from '../database/constraints'
 const day = new Date().getDate();
 
 
-let columnTitles: Constraint[] = [constraints.colorless, constraints.bow_user, constraints.sword];
+let columnTitles: Constraint[] = [constraints.colorless, constraints.bow, constraints.sword];
 if (day === 11) {
     columnTitles = [constraints.colorless, constraints.bow_user, constraints.sword];
 }
@@ -72,5 +72,8 @@ else if (day == 28) {
 }
 else if (day == 29) {
     columnTitles = [constraints.dancer, constraints.blazing, constraints.lullsd3]
+}
+else if (day == 1) {
+    columnTitles = [constraints.threatas2, constraints.thracia, constraints.duo]
 }
 export default columnTitles
