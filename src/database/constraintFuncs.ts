@@ -229,6 +229,14 @@ function is_five_star(character:Character) {
 }
 
 // Skills
+function closecounter(character:Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "closecounter") {
+            return true;
+        }
+    }
+    return false;
+}
 function lullsd3(character:Character) {
     for (let i = 0; i < character.skills.length; i++) {
         if (character.skills[i] === "lullsd3") {
@@ -433,6 +441,7 @@ const funcList = {
     dc: dc,
     lullsd3: lullsd3,
     threatas2: threatas2,
+    closecounter: closecounter,
     // Misc
     duo: duo,
     harmonic: harmonic,

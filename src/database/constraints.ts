@@ -74,6 +74,7 @@ const constraints: Constraints = {
     dc: {id: "dc", title: "Has Distant Counter A Skill", func: funcList.dc, warning: "Skill must be in hero's base kit"},
     lullsd3: {id: "lullsd3", title: "Has Lull Spd/Def 3", func: funcList.lullsd3, warning: "Skill must be in hero's base kit"},
     threatas2: {id: "threatas2", title: "Has Threat. Atk/Spd 2", func: funcList.threatas2, warning: "Skill must be in hero's base kit"},
+    closecounter: {id: "closecounter", title: "Has Close Counter A Skill", func: funcList.closecounter, warning: "Skill must be in hero's base kit"},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},

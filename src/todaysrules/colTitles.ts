@@ -79,4 +79,7 @@ else if (day == 1) {
 else if (day == 2) {
     columnTitles = [constraints.asclash3, constraints.cav, constraints.radiant_dawn]
 }
+else if (day == 3) {
+    columnTitles = [constraints.closecounter, constraints.fates, constraints.resplendent]  
+}
 export default columnTitles
