@@ -82,4 +82,8 @@ else if (day == 2) {
 else if (day == 3) {
     columnTitles = [constraints.closecounter, constraints.fates, constraints.resplendent]  
 }
+else if (day == 4) {
+    columnTitles = [constraints.shadow_dragon, constraints.heroes, constraints.ascatch3]
+}
+columnTitles = [constraints.shadow_dragon, constraints.heroes, constraints.ascatch3]
 export default columnTitles

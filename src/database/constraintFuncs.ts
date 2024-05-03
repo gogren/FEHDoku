@@ -229,6 +229,14 @@ function is_five_star(character:Character) {
 }
 
 // Skills
+function ascatch3(character:Character) {
+    for (let i = 0; i < character.skills.length; i++) {
+        if (character.skills[i] === "ascatch3") {
+            return true;
+        }
+    }
+    return false;
+}
 function closecounter(character:Character) {
     for (let i = 0; i < character.skills.length; i++) {
         if (character.skills[i] === "closecounter") {
@@ -442,6 +450,7 @@ const funcList = {
     lullsd3: lullsd3,
     threatas2: threatas2,
     closecounter: closecounter,
+    ascatch3: ascatch3,
     // Misc
     duo: duo,
     harmonic: harmonic,

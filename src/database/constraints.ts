@@ -17,7 +17,7 @@ interface Constraints {
     };
 }
 
-
+// DO NOT CHANGE IDs AFTER CREATING THEM AND NPM RUN DEV
 // key: {id: "", title: "", func: funcList, warning: ""},
 const constraints: Constraints = {
     // Origin
@@ -75,6 +75,7 @@ const constraints: Constraints = {
     lullsd3: {id: "lullsd3", title: "Has Lull Spd/Def 3", func: funcList.lullsd3, warning: "Skill must be in hero's base kit"},
     threatas2: {id: "threatas2", title: "Has Threat. Atk/Spd 2", func: funcList.threatas2, warning: "Skill must be in hero's base kit"},
     closecounter: {id: "closecounter", title: "Has Close Counter A Skill", func: funcList.closecounter, warning: "Skill must be in hero's base kit"},
+    ascatch3: {id: "ascatch3", title: "Has Atk/Spd Catch 3", func: funcList.ascatch3, warning: "Skill must be in hero's base kit"},
 
    // Misc
    dancer: {id: "dancer", title: "Dancer", func: funcList.dancer, warning: ""},
