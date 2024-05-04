@@ -73,5 +73,8 @@ else if (day == 3) {
 else if (day == 4) {
     rowTitles = [constraints.dagger, constraints.dragon, constraints.lance]
 }
+else if (day === 5) {
+    rowTitles = [constraints.cav, constraints.blue, constraints.flying]
+}
 rowTitles = [constraints.dagger, constraints.dragon, constraints.lance]
 export default rowTitles

@@ -85,5 +85,8 @@ else if (day == 3) {
 else if (day == 4) {
     columnTitles = [constraints.shadow_dragon, constraints.heroes, constraints.ascatch3]
 }
+else if (day === 5) {
+    columnTitles = [constraints.galeforce, constraints.thracia, constraints.duo]
+}
 columnTitles = [constraints.shadow_dragon, constraints.heroes, constraints.ascatch3]
 export default columnTitles

@@ -21,7 +21,7 @@ interface Constraints {
 // key: {id: "", title: "", func: funcList, warning: ""},
 const constraints: Constraints = {
     // Origin
-   shadow_dragon: {id: "shadow_dragon", title: "FE: Shadow Dragon", func: funcList.shadow_dragon, warning: ""}, 
+   shadow_dragon: {id: "shadow_dragon", title: "FE Shadow Dragon/Mystery", func: funcList.shadow_dragon, warning: "Includes both Shadow Dragon and Mystery of the Emblem"}, 
    three_houses: {id: "three_houses", title: "FE: Three Houses/Hopes", func: funcList.three_houses, warning: ""},
    heroes: {id: "heroes", title: "FE: Heroes", func: funcList.heroes, warning: ""},
    gaiden: {id: "gaiden", title: "FE: Gaiden (Echoes)", func: funcList.gaiden, warning: ""},

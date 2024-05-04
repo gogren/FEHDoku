@@ -16,8 +16,8 @@ export interface Character {
 }
 
 /* Games: 
-0 - FE Shadow Dragon and the Blade of Light
-1 - FE Gaiden / Mystery
+0 - FE Shadow Dragon and the Blade of Light / Mystery
+1 - FE Gaiden (Echoes)
 3 - FE Genealogy of the Holy World
 4 - FE Thracia 776
 5 - FE The Binding Blade
